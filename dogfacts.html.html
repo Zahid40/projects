@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dog facts</title>
+    <script src="https://kit.fontawesome.com/d304302302.js" crossorigin="anonymous"></script>
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            background-color: #150028;
+            color: whitesmoke;
+            font-family: monospace;
+            align-items: center;
+        }
+
+        .icon {
+            border: none;
+            background-color: white;
+            width: 70px;
+            height: 70px;
+            border-radius: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <h1
+        style="text-align: center;font-size: 50px;background-color: rgba(255, 255, 255, 0.493);color: #150028;padding: 20px;">Dog facts</h1>
+    <p id="ff" style="text-align: center;font-size:15px;font-weight: 700;height: 100px;width: 100%;padding: 10px;"></p>
+    <div id="ffi"
+        style="height:40vh;width: 100%;background-size: contain;background-repeat: no-repeat;background-position: center;">
+    </div>
+    <button onclick="newfact()"
+        style="font-size: 15px;padding: 10px;width: 50%;display: block;margin: auto;border-radius: 60px;border: 0px;font-weight: 700;position:absolute;bottom: 180px;left: 25%;height: 50px;background-color: rgba(240, 248, 255, 0.397);color: white;">New
+        Fact</button>
+
+    <div id="social" style="display: flex;justify-content: space-around;position:fixed;bottom:10px;width: 100%;"></div>
+</body>
+
+</html>
+<script>
+    let a = document.getElementById("social");
+    let link_arr = ["https://github.com/Zahid40", "https://www.instagram.com/its_zahid83/", "https://zahid40.github.io/"]
+    let icons_arr = ['<i class="fa fa-github fa-2x"></i>', '<i class="fa fa-instagram fa-2x"></i>', '<i class="fa fa-link fa-2x"></i>']
+    for (let index = 0; index < 3; index++) {
+        let btn = document.createElement("button");
+        btn.classList.add("icon");
+        btn.innerHTML = `${icons_arr[index]}`
+        btn.onclick = function URL() {
+            location.href = `${link_arr[index]}`;
+        };
+        a.append(btn)
+    }
+
+
+
+    let newfact = () => {
+        let p = fetch("https://dogapi.dog/api/v2/facts")
+        let ip = fetch("https://dog.ceo/api/breeds/image/random")
+        p.then((res) => {
+            return res.json();
+        }).then((value) => {
+            console.log(value.data[0].attributes.body)
+            document.getElementById('ff').innerHTML = '" ' + value.data[0].attributes.body + '"';
+        })
+
+        ip.then((resip) => {
+            return resip.json()
+        }).then((value2) => {
+            console.log(value2.message)
+            document.getElementById('ffi').style.backgroundImage = `url('${value2.message}')`;
+        })
+    }
+    setTimeout(() => {
+        newfact();
+    }, 1000);
+    setInterval(() => {
+        newfact();
+    }, 12000);
+
+</script>
