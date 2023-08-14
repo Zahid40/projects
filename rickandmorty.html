@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Rick and Morty</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+
+<body data-bs-theme="dark">
+    <nav class="navbar position-fixed"
+        style="width: 100%; background-color: rgba(0, 0, 0, 0.361);color: white;z-index: 6;">
+        <div class="container-fluid">
+            <span class="navbar-text" style="color: white;font-weight: 900;font-size: 14px;">
+                <a href="#" class="link-light link-offset-2 link-underline link-underline-opacity-0 "
+                    style="text-shadow: 0px 0px 5px black;padding: 20px;font-size: 16px;">Rick and Morty</a>
+                <a href="https://www.instagram.com/its_zahid83/" target="_blank" class="link-light link-offset-2 link-underline link-underline-opacity-0 m-2"
+                    style="text-shadow: 0px 0px 5px black;font-weight: 700;">Instagram</a>
+                <a href="https://github.com/Zahid40"  target="_blank" class="link-light link-offset-2 link-underline link-underline-opacity-0 m-2"
+                    style="text-shadow: 0px 0px 5px black;font-weight: 700;">Github</a>
+                <a href="https://zahid40.github.io/"  target="_blank" class="link-light link-offset-2 link-underline link-underline-opacity-0 m-2"
+                    style="text-shadow: 0px 0px 5px black;font-weight: 700;">Website</a>
+            </span>
+        </div>
+    </nav>
+    <img src="https://r4.wallpaperflare.com/wallpaper/178/471/787/rick-and-morty-run-the-jewels-vector-graphics-wallpaper-9fa542ec0ee60c7b259cf8a2a1614474.jpg"
+        class="img-fluid" alt="...">
+
+    <div class="d-flex justify-content-evenly" id="main_card_collector" style="flex-wrap: wrap;"></div>
+
+    <div class="d-flex justify-content-between p-3 m-2">
+        <button class="btn btn-primary" type="button" onclick="pre_page()">Pre</button>
+        <span id="page_on_which">pages</span>
+        <button class="btn btn-primary" type="button" onclick="next_page()">Next</button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+</body>
+<script>
+    // let arr_endpoint = ["character","location","episode"]
+
+    let api_link = "https://rickandmortyapi.com/api/character?page=" + Math.floor(Math.random() * (42 + 1));
+    let main_function_api = async (api_link) => {
+    
+    let response = await fetch(api_link);
+    let val = await response.json();
+
+    let status_color = (status) => {
+        let bcolor = "grey";
+        if (status == "Alive") {
+            bcolor = "green";
+        } else if (status == "Dead") {
+            bcolor = "red";
+        }
+        return bcolor;
+    };
+
+    for (let index = 0; index < val.results.length; index++) {
+        let card = `<div class="card mb-3 mt-3" style="max-width: 540px;width:45%">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="${val.results[index].image}" class="img-fluid rounded-start" alt="" id="image_tem">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">${val.results[index].name}</h5>
+              <p class="card-text">Origin : ${val.results[index].origin.name}</p>
+              <p class="card-text">Species : ${val.results[index].species}</p>
+              <p class="card-text">Gender : ${val.results[index].gender}</p>
+              <p class="card-text" style="color:${status_color(val.results[index].status)};"><small >Last seen ${val.results[index].status} on ${val.results[index].location.name}</small></p>
+            </div>
+          </div>
+        </div>
+      </div>`;
+        document.getElementById('main_card_collector').innerHTML += card;
+    }
+    return val; // Return the fetched data
+};
+
+let pre_page;
+let next_page;
+let main2 = async () => {
+    let p_data = await main_function_api(api_link);
+    console.log(api_link);
+    let page_number_url = api_link.slice(-2);
+    document.getElementById('page_on_which').innerHTML = page_number_url;
+    pre_page = ()=>{
+        document.getElementById('main_card_collector').innerHTML = ""
+        api_link = p_data.info.prev
+        main_function_api(api_link)
+        main2();
+        console.log(p_data.info.prev)
+    }
+    next_page = ()=>{
+        document.getElementById('main_card_collector').innerHTML = ""
+        api_link = p_data.info.next
+        main_function_api(api_link)
+        main2();
+        console.log(p_data.info.next);
+    }
+
+};
+main2();
+
+</script>
+
+</html>
