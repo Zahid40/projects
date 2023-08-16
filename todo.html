@@ -7,32 +7,102 @@
     <title>TODO</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+        <script src="https://kit.fontawesome.com/d304302302.js" crossorigin="anonymous"></script>
+
+    <style>
+        .social{
+    height: 200px;
+    border-radius: 20px;
+    background: rgba(0, 0, 0, 0.477);
+    backdrop-filter: blur(4px);
+    color: grey;
+}
+.social{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: 95%;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding: 0px;
+    font-size: 25px;
+}
+.social a{
+    text-align: center;
+    display: flex;
+    text-decoration: none;
+    color: white;
+    padding: 0px;
+    
+}
+.social p{
+    text-align: center;
+    font-size: 15px;
+    padding: 2px;
+}
+#bgcat{
+    height: 100%;
+    width: 60%;
+    background-image: url(https://t4.ftcdn.net/jpg/05/34/48/37/360_F_534483775_2hBgOxryd3El6t3tKOtbcM95Yq3OmTGG.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+}
+#bgcat2{
+    height: 100%;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+    </style>
 </head>
 
-<body data-bs-theme="dark">
-    <nav class="navbar bg-body-tertiary">
+<body data-bs-theme="dark" style="background-color: #1c1340;">
+    <nav class="navbar" style="background-color: rgba(0, 0, 0, 0.363);backdrop-filter: blur(4px);">
         <div class="container-fluid d-flex justify-content-between">
             <span class="navbar-text ">
                 <a class="link-light link-offset-2 link-underline link-underline-opacity-0 m-2" href="#"
                     style="font-weight: 800;font-size: 18px;">ToDo</a>
             </span>
             <button type="button" class="btn btn-primary m-2 p-4 text-center" id="btn_plus_nav"
-                style="border-radius: 20px;height: max-content;width: max-content;box-shadow: -5px -5px 9px rgba(16, 16, 16, 0.692), 5px 5px 9px rgba(28, 28, 28, 0.5);">
+                style="border-radius: 20px;height: max-content;width: max-content;box-shadow: -2px -2px 9px rgba(16, 16, 16, 0.692), 3px 3px 9px rgba(28, 28, 28, 0.5);">
             </button>
         </div>
     </nav>
 
-    <div class="container p-4" style="font-weight: 200;">
+    <div class="container p-4">
         <div id="todo_form"></div>
 
-        <div class="card mt-3">
+        <div class="card mt-3"
+            style="box-shadow: -5px -5px 9px rgba(16, 16, 16, 0.692), 5px 5px 9px rgba(28, 28, 28, 0.5);background-color: #0303031d;backdrop-filter: blur(4px);">
             <div class="card-body" id="card_collector">
                 <span style="display: block;text-align: center;">Todo list</span>
                 <!-- add card todo here  -->
             </div>
             <div class="d-flex justify-content-end">
-                <button class="btn btn-outline-danger me-md-2 m-4" onclick="clear_all_todo()">Clear all Todos</button>
+                <button class="btn btn-danger me-md-2 m-4" onclick="clear_all_todo()"
+                    style="box-shadow: -5px -5px 9px rgba(16, 16, 16, 0.692), 5px 5px 9px rgba(28, 28, 28, 0.5)">Clear
+                    all Todos</button>
             </div>
+        </div>
+    </div>
+
+    <div class="social container mb-3">
+        <div id="bgcat"></div>
+        <div id="bgcat2">
+            <a href="https://www.instagram.com/its_zahid83/">
+                <i class="fa fa-instagram"></i>
+                <p>Instagram </p>
+            </a>
+            <a href="https://github.com/Zahid40"><i class="fa fa-github"></i>
+                <p>Github</p>
+            </a>
+            <a href="https://zahid40.github.io/"><i class="fa fa-link"></i>
+                <p>Portfolio</p>
+            </a>
+            <p>&lt;&#47;&gt; Developer Zahid</p>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
@@ -42,6 +112,11 @@
 
 <script>
     //svg variables
+    const svg_bg_body = `<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" viewBox="0 0 640 800" id="qqquad"><g shape-rendering="crispEdges" stroke-linejoin="round" fill="none" stroke-width="1.5" stroke="hsl(353, 98%, 41%)"><polygon points="640,0 560,100 640,100"></polygon><polygon points="560,0 560,100 480,100"></polygon><polygon points="480,100 480,200 560,100"></polygon><polygon points="640,200 560,100 560,200"></polygon><polygon points="480,0 480,100 400,100"></polygon><polygon points="400,0 320,0 400,100"></polygon><polygon points="360,100 360,150 400,150"></polygon><polygon points="320,150 360,100 320,100"></polygon><polygon points="360,200 320,150 360,150"></polygon><polygon points="360,150 360,200 400,200"></polygon><polygon points="480,200 400,200 400,100"></polygon><polygon points="480,200 440,250 440,200"></polygon><polygon points="440,250 440,200 400,200"></polygon><polygon points="440,300 400,300 400,250"></polygon><polygon points="440,250 480,250 440,300"></polygon><polygon points="400,200 400,250 360,200"></polygon><polygon points="320,200 360,250 360,200"></polygon><polygon points="360,250 320,250 320,300"></polygon><polygon points="360,250 400,300 400,250"></polygon><polygon points="360,300 360,350 400,300"></polygon><polygon points="360,350 360,300 320,300"></polygon><polygon points="360,400 360,350 320,400"></polygon><polygon points="400,400 400,350 360,400"></polygon><polygon points="480,300 480,350 440,350"></polygon><polygon points="400,300 440,300 400,350"></polygon><polygon points="400,350 440,400 400,400"></polygon><polygon points="480,400 480,350 440,350"></polygon><polygon points="560,300 640,200 640,300"></polygon><polygon points="560,300 480,300 480,200"></polygon><polygon points="560,350 560,300 520,350"></polygon><polygon points="520,350 520,300 480,300"></polygon><polygon points="520,400 480,400 520,350"></polygon><polygon points="520,400 560,350 520,350"></polygon><polygon points="560,300 640,400 560,400"></polygon><polygon points="320,0 320,100 240,100"></polygon><polygon points="240,0 240,100 160,0"></polygon><polygon points="240,150 240,100 200,100"></polygon><polygon points="160,150 200,150 200,100"></polygon><polygon points="200,150 160,200 200,200"></polygon><polygon points="240,200 240,150 200,200"></polygon><polygon points="240,100 320,100 240,200"></polygon><polygon points="160,100 80,0 160,0"></polygon><polygon points="0,100 80,0 80,100"></polygon><polygon points="0,100 0,200 80,100"></polygon><polygon points="160,100 160,200 80,200"></polygon><polygon points="160,300 160,200 80,200"></polygon><polygon points="80,300 80,200 0,200"></polygon><polygon points="0,400 80,300 80,400"></polygon><polygon points="160,350 120,300 120,350"></polygon><polygon points="120,350 80,300 80,350"></polygon><polygon points="80,400 80,350 120,400"></polygon><polygon points="160,400 160,350 120,350"></polygon><polygon points="320,200 320,250 280,200"></polygon><polygon points="280,250 280,200 240,250"></polygon><polygon points="240,250 280,300 280,250"></polygon><polygon points="320,250 320,300 280,250"></polygon><polygon points="200,200 240,250 240,200"></polygon><polygon points="200,250 200,200 160,200"></polygon><polygon points="200,300 160,300 200,250"></polygon><polygon points="240,300 240,250 200,300"></polygon><polygon points="240,300 200,350 240,350"></polygon><polygon points="200,350 200,300 160,350"></polygon><polygon points="200,400 200,350 160,350"></polygon><polygon points="240,400 200,350 200,400"></polygon><polygon points="280,350 320,350 320,300"></polygon><polygon points="280,350 240,350 280,300"></polygon><polygon points="240,350 280,400 240,400"></polygon><polygon points="320,400 280,350 320,350"></polygon><polygon points="320,450 280,400 280,450"></polygon><polygon points="280,400 280,450 240,400"></polygon><polygon points="280,450 280,500 240,500"></polygon><polygon points="320,500 320,450 280,500"></polygon><polygon points="240,450 240,400 200,400"></polygon><polygon points="160,400 200,450 160,450"></polygon><polygon points="160,450 200,450 160,500"></polygon><polygon points="240,500 240,450 200,500"></polygon><polygon points="240,550 240,500 200,550"></polygon><polygon points="200,500 200,550 160,550"></polygon><polygon points="160,600 160,550 200,600"></polygon><polygon points="240,600 200,550 240,550"></polygon><polygon points="320,500 280,550 280,500"></polygon><polygon points="280,500 280,550 240,550"></polygon><polygon points="280,550 280,600 240,550"></polygon><polygon points="320,600 320,550 280,600"></polygon><polygon points="160,500 80,400 80,500"></polygon><polygon points="80,500 80,400 0,400"></polygon><polygon points="80,600 80,500 0,500"></polygon><polygon points="120,500 160,500 120,550"></polygon><polygon points="80,550 120,550 120,500"></polygon><polygon points="120,550 120,600 80,550"></polygon><polygon points="120,600 160,550 160,600"></polygon><polygon points="120,600 160,650 120,650"></polygon><polygon points="80,650 120,600 80,600"></polygon><polygon points="80,650 120,700 120,650"></polygon><polygon points="120,700 160,650 120,650"></polygon><polygon points="0,700 80,600 0,600"></polygon><polygon points="80,700 0,700 80,800"></polygon><polygon points="160,700 160,800 80,700"></polygon><polygon points="320,600 280,650 280,600"></polygon><polygon points="240,600 280,600 280,650"></polygon><polygon points="280,650 280,700 240,650"></polygon><polygon points="320,700 280,700 280,650"></polygon><polygon points="240,600 240,650 200,600"></polygon><polygon points="200,600 160,650 200,650"></polygon><polygon points="160,700 200,650 160,650"></polygon><polygon points="240,700 200,700 240,650"></polygon><polygon points="200,750 200,700 240,700"></polygon><polygon points="200,750 160,700 160,750"></polygon><polygon points="200,800 200,750 160,800"></polygon><polygon points="240,750 240,800 200,800"></polygon><polygon points="320,700 240,700 320,800"></polygon><polygon points="640,500 560,400 560,500"></polygon><polygon points="560,450 560,400 520,400"></polygon><polygon points="520,400 480,400 520,450"></polygon><polygon points="480,450 520,450 480,500"></polygon><polygon points="560,450 560,500 520,500"></polygon><polygon points="560,550 560,500 520,550"></polygon><polygon points="520,550 520,500 480,550"></polygon><polygon points="480,600 520,550 520,600"></polygon><polygon points="560,600 520,600 520,550"></polygon><polygon points="560,500 640,600 640,500"></polygon><polygon points="480,450 480,400 440,400"></polygon><polygon points="440,450 440,400 400,450"></polygon><polygon points="400,450 440,500 400,500"></polygon><polygon points="440,500 480,450 480,500"></polygon><polygon points="360,450 360,400 400,450"></polygon><polygon points="320,450 360,450 320,400"></polygon><polygon points="360,450 320,450 320,500"></polygon><polygon points="400,450 400,500 360,450"></polygon><polygon points="400,550 400,500 360,550"></polygon><polygon points="360,550 360,500 320,500"></polygon><polygon points="320,600 360,550 360,600"></polygon><polygon points="400,550 360,550 360,600"></polygon><polygon points="480,500 400,500 400,600"></polygon><polygon points="480,600 440,600 480,650"></polygon><polygon points="400,650 440,600 440,650"></polygon><polygon points="400,700 400,650 440,650"></polygon><polygon points="480,700 480,650 440,650"></polygon><polygon points="320,600 400,700 320,700"></polygon><polygon points="400,800 400,700 320,800"></polygon><polygon points="480,700 480,800 400,700"></polygon><polygon points="640,600 560,700 560,600"></polygon><polygon points="480,600 560,600 480,700"></polygon><polygon points="560,700 560,800 480,800"></polygon><polygon points="640,700 640,800 560,700"></polygon></g><g fill="hsl(220, 62%, 45%)" stroke-width="3" stroke="hsl(220, 43%, 13%)"></g></svg>`
+    document.addEventListener("DOMContentLoaded", function () {
+        document.body.style.backgroundImage = `url("data:image/svg+xml;charset=utf-8,${encodeURIComponent(svg_bg_body)}")`;
+    });
+
     const trash = `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                                 fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16"
                                 style="color:rgb(255, 105, 105)">
@@ -63,7 +138,7 @@
                 <label for="floatingPassword">Description</label>
             </div>
             <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                <button class="btn btn-primary m-3" type="button" style="font-weight: 200;" onclick="add_todo_btn()">Add ToDo</button>
+                <button class="btn btn-primary m-3" type="button" style="font-weight: 200;box-shadow: -5px -5px 9px rgba(16, 16, 16, 0.692), 5px 5px 9px rgba(28, 28, 28, 0.5)" onclick="add_todo_btn()">Add ToDo</button>
             </div>`;
 
     // Set initial content
@@ -107,10 +182,12 @@
             let card = document.createElement('div');
             card.className = 'card mt-2 d-flex justify-content-between card_bg_changer';
             card.style.flexDirection = 'row'
+            card.style.backgroundColor = '#00000075'
+            card.style.boxShadow = ' -5px -5px 9px rgba(16, 16, 16, 0.692),5px 5px 9px rgba(28, 28, 28, 0.5)'
             card.innerHTML = `
-            <div class="card-body">
+            <div class="card-body" style="box-shadow:9px 0px 10px 0px rgba(28, 28, 28, 0.5)">
                 <h5 class="card-title">${key}</h5>
-                <p class="card-text">${value}</p>
+                <p class="card-text" style="color:grey;">${value}</p>
             </div>
             <button class="btn btn-outline-danger" style="border:none;" onclick="delete_this_todo('${key}')">${trash}</button>
         `;
