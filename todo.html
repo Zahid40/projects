@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TODO</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+
+<body data-bs-theme="dark">
+    <nav class="navbar bg-body-tertiary">
+        <div class="container-fluid d-flex justify-content-between">
+            <span class="navbar-text ">
+                <a class="link-light link-offset-2 link-underline link-underline-opacity-0 m-2" href="#"
+                    style="font-weight: 800;font-size: 18px;">ToDo</a>
+            </span>
+            <button type="button" class="btn btn-primary m-2 p-4 text-center" id="btn_plus_nav"
+                style="border-radius: 20px;height: max-content;width: max-content;box-shadow: -5px -5px 9px rgba(16, 16, 16, 0.692), 5px 5px 9px rgba(28, 28, 28, 0.5);">
+            </button>
+        </div>
+    </nav>
+
+    <div class="container p-4" style="font-weight: 200;">
+        <div id="todo_form"></div>
+
+        <div class="card mt-3">
+            <div class="card-body" id="card_collector">
+                <span style="display: block;text-align: center;">Todo list</span>
+                <!-- add card todo here  -->
+            </div>
+            <div class="d-flex justify-content-end">
+                <button class="btn btn-outline-danger me-md-2 m-4" onclick="clear_all_todo()">Clear all Todos</button>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+</body>
+
+<script>
+    //svg variables
+    const trash = `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16"
+                                style="color:rgb(255, 105, 105)">
+                                <path
+                                    d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5ZM11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H2.506a.58.58 0 0 0-.01 0H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1h-.995a.59.59 0 0 0-.01 0H11Zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5h9.916Zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47ZM8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5Z" />
+                            </svg>`
+    // Get references to the HTML elements
+    const toggleElement = document.getElementById("todo_form");
+    const toggleButton = document.getElementById("btn_plus_nav");
+
+    // Initial content and alternate content
+    const initialContent = "";
+    const alternateContent = ` <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="floatingInput" placeholder="Title" autofocus>
+                <label for="floatingInput">Title</label>
+            </div>
+            <div class="form-floating">
+                <input type="text" class="form-control" id="floatingPassword" placeholder="Description">
+                <label for="floatingPassword">Description</label>
+            </div>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                <button class="btn btn-primary m-3" type="button" style="font-weight: 200;" onclick="add_todo_btn()">Add ToDo</button>
+            </div>`;
+
+    // Set initial content
+    toggleElement.innerHTML = initialContent;
+    toggleButton.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="32" height="26" fill="currentColor" class="bi bi-plus-lg"
+                    viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z" />
+                </svg>`
+
+    // Toggle function
+    function toggleInnerHTML() {
+        if (toggleElement.innerHTML === initialContent) {
+            toggleElement.innerHTML = alternateContent;
+            toggleButton.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="32" height="26" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+  <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"/>
+</svg>`
+        } else {
+            toggleElement.innerHTML = initialContent;
+            toggleButton.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="32" height="26" fill="currentColor" class="bi bi-plus-lg"
+                    viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z" />
+                </svg>`
+        }
+    }
+    // Attach click event listener to the button
+    toggleButton.addEventListener("click", toggleInnerHTML);
+
+
+
+    // Loop for adding todos
+    let adders_function = () => {
+        let cardCollector = document.getElementById('card_collector');
+        cardCollector.innerHTML = `<span style="display: block;text-align: center;">Todo list</span>`;
+
+        for (let index = 0; index < localStorage.length; index++) {
+            let key = localStorage.key(index);
+            let value = localStorage.getItem(key);
+
+            let card = document.createElement('div');
+            card.className = 'card mt-2 d-flex justify-content-between card_bg_changer';
+            card.style.flexDirection = 'row'
+            card.innerHTML = `
+            <div class="card-body">
+                <h5 class="card-title">${key}</h5>
+                <p class="card-text">${value}</p>
+            </div>
+            <button class="btn btn-outline-danger" style="border:none;" onclick="delete_this_todo('${key}')">${trash}</button>
+        `;
+
+            cardCollector.appendChild(card);
+        }
+    }
+
+    adders_function();
+
+    // Button for adding a todo
+    let add_todo_btn = async () => {
+        let title = document.getElementById('floatingInput').value;
+        let description = document.getElementById('floatingPassword').value;
+        if (title === "" || description === "") {
+            return;
+        }
+
+        localStorage.setItem(title, description);
+        await adders_function();
+
+        document.getElementById('floatingInput').value = '';
+        document.getElementById('floatingPassword').value = '';
+    }
+
+    // Delete a specific todo
+    let delete_this_todo = (key) => {
+        localStorage.removeItem(key);
+        adders_function();
+    }
+
+    // Clear all todos
+    let clear_all_todo = async () => {
+        localStorage.clear();
+        adders_function();
+    }
+
+</script>
+
+</html>
