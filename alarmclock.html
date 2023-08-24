@@ -6,47 +6,50 @@
     <title>Clock</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <style>
+        *{
+            font-family:monospace;
+            font-size: 20px;
+        }
         .dissapper{
             display: none;
         }
     </style>
   </head>
-  <body class="container d-flex justify-content-center align-items-center" data-bs-theme="dark" style="height: 90vh;">
-    <div class="card text-center" style="width: 200px;">
-        <div class="card-header"></div>
-        <div class="card-body" >
+  <body class="container d-flex justify-content-center align-items-center" data-bs-theme="dark" style="height: 90vh;background-color: #05161A;">
+    <div class="card text-center" style="width: 90%;" >
+        <div class="card-header" style="font-size:20px;background-color: #294D61;"></div>
+        <div class="card-body" style="background-color: #0C7075;">
             <div class="container text-center">
-                <div class="row">
-                  <div class="col-sm p-2"></div>
-                  <div class="col-sm p-2">:</div>
-                  <div class="col-sm p-2"></div>
-                  <div class="col-sm p-2">:</div>
-                  <div class="col-sm p-2"></div>
-                  <div class="col-sm p-2"></div>
+                <div class="row mb-3" style="font-size:40px;">
+                  <div class="col p-2" style="font-size:40px;font-weight: 900;background-color: #072E33;"></div>
+                  <div class="col p-2" style="font-size:40px;font-weight: 900;">:</div>
+                  <div class="col p-2" style="font-size:40px;font-weight: 900;background-color: #072E33;"></div>
+                  <div class="col p-2" style="font-size:40px;font-weight: 900;">:</div>
+                  <div class="col p-2" style="font-size:40px;font-weight: 900;background-color: #072E33;"></div>
+                  <div class="col p-2" style="font-size:30px;font-weight: 100;background-color: #05161A;"></div>
                 </div>
                 <div class="row">
-                  <div class="input-group mb-3">
-                      <input type="time" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" id="set_alarm_input">
+                  <div class="form-floating mb-3">
+                      <input type="time" class="form-control" placeholder="Enter Time to set Alarm" aria-label="Username" aria-describedby="basic-addon1" id="set_alarm_input"  required style="background-color: #072E33;">
+                      <label for="set_alarm_input p-3" >Enter Alarm Time</label>
                   </div>
                 </div>
               </div>
                 <div class="row">
-                  <div class="col-sm"><button type="button" class="btn btn-light" onclick="stop_alarm()">Stop</button></div>
-                  <div class="col-sm"><button type="button" class="btn btn-light" onclick="set_alarm()">Set Alarm</button></div>
+                    <div class="col"><button type="button" class="btn btn-light" onclick="set_alarm()">Set Alarm</button></div>
+                  <div class="col"><button type="button" class="btn btn-light" onclick="stop_alarm()">Stop Alarm</button></div>
                 </div>
         </div>
-        <div class="card-footer text-body-secondary">
-          2 days ago
-        </div>
+        <div class="card-footer text-body-secondary" style="background-color: #294D61;"> </div>
       </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
   </body>
   <script>
       let dayarr = [ "Sunday","Monday" , "Tuesday" , "Wednesday" , "Thursday" , "Friday" , "Saturday"];
-      let valclk = document.querySelectorAll(".col-sm");
+      let valclk = document.querySelectorAll(".col");
       setInterval(()=>{
-        let d = new Date;
+        let d = new Date();
         document.querySelector(".card-header").innerHTML = `${d.getDate()}-${d.getMonth() +1}-${d.getFullYear()} ${dayarr[d.getDay()]}`
         let hour = d.getHours()% 12 || 12;
         valclk[0].innerHTML = `${String(d.getHours()% 12 || 12).padStart(2, '0')}`
@@ -55,17 +58,51 @@
         valclk[5].innerHTML = `${d.getHours()>=12?"PM" : "AM"}`;
     },1000)
 
+    var interval_time;
     let music = new Audio('./sources/Alan Walker - Avem (The Aviation Theme)(DJSathi).mp3');
-    let set_alarm =()=>{
+
+
+    let take_seconds=()=>{
         let si = document.getElementById('set_alarm_input');
+        document.querySelector(".form-floating").innerHTML = `Your Alarm is set`;
         let hour = parseInt(si.value.slice(0,2))
         let min = parseInt(si.value.slice(3))
-
-        music.play();
-        console.log(parseInt(si.value.slice(3)));
+        console.log(hour + " : " + min);
+        setInterval(()=>{
+            let d = new Date();
+            interval_time = parseInt(hour - d.getHours())*3600 + parseInt(min -  d.getMinutes())*60 - parseInt(d.getSeconds());
+            if(interval_time <= 0 || interval_time === NaN){
+                document.querySelector('.card-footer').innerHTML = `Please put Valid value`;
+                return 0;
+            }
+            document.querySelector('.card-footer').innerHTML = `Alarm in ${interval_time}`;
+            interval_time - 1;
+        },1000)
+        return interval_time;
+    }
+    let set_alarm =()=>{
+        take_seconds();
+        if(interval_time <= 0 || interval_time === NaN){
+            return 0;
+        }
+        else{
+            setTimeout(()=>{
+                console.log(interval_time);
+                setTimeout(()=>{
+                    music.play();
+                },interval_time*1000);
+            },1000)
+        }
+        interval_time = 0
+        return 0;
     }
     let stop_alarm = ()=>{
-        music.pause();
+        music.load();
+        interval_time = 0;
+        document.querySelector('.card-footer').innerHTML = ` `;
+        document.querySelector('.form-floating').innerHTML = `<input type="time" class="form-control" placeholder="Enter Time to set Alarm" aria-label="Username" aria-describedby="basic-addon1" id="set_alarm_input"  required>
+                      <label for="set_alarm_input p-3">Enter Alarm Time</label>`;
+
     }
   </script>
 </html>
