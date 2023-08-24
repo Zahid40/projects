@@ -31,7 +31,7 @@
                 </div>
               </div>
                 <div class="row">
-                  <div class="col-sm"><button type="button" class="btn btn-light">Light</button></div>
+                  <div class="col-sm"><button type="button" class="btn btn-light" onclick="stop_alarm()">Stop</button></div>
                   <div class="col-sm"><button type="button" class="btn btn-light" onclick="set_alarm()">Set Alarm</button></div>
                 </div>
         </div>
@@ -55,14 +55,17 @@
         valclk[5].innerHTML = `${d.getHours()>=12?"PM" : "AM"}`;
     },1000)
 
+    let music = new Audio('./sources/Alan Walker - Avem (The Aviation Theme)(DJSathi).mp3');
     let set_alarm =()=>{
         let si = document.getElementById('set_alarm_input');
         let hour = parseInt(si.value.slice(0,2))
         let min = parseInt(si.value.slice(3))
 
-        let music = new Audio("https://drive.google.com/file/d/1C8W_ES44XQSPYJ-xqDEEL1qTImDXU5XU/view");
         music.play();
         console.log(parseInt(si.value.slice(3)));
+    }
+    let stop_alarm = ()=>{
+        music.pause();
     }
   </script>
 </html>
