@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <title>friends</title>
+     <style>
+        *{
+            font-family: 'Poppins', sans-serif;
+        }
+    /* Custom styles */
+    .bg-video-container {
+      position: relative;
+      width: 100%;
+      height: 80vh; /* Use vh instead of % for full viewport height */
+      background-image: url('/images/mainimage.jpg');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover; /* Adjust the background sizing */
+    }
+  </style>
+  <title>Background Video with Overlapping Navbar</title>
+</head>
+<body>
+  <div class="bg-video-container flex flex-col justify-between p-4">
+    <!-- Navbar -->
+    <nav class=" py-6 px-5 bg-white bg-opacity-30 backdrop-blur-sm rounded-2xl">
+      <div class="container mx-auto flex justify-between items-center">
+        <a href="#" class="text-2xl font-bold text-white">BDY</a>
+        <ul class="flex space-x-4">
+          <li><a href="#" class="font-semibold text-purple-100 hover:text-gray-300">About</a></li>
+          <li><a href="#" class="font-semibold text-purple-100 hover:text-gray-300">Developer</a></li>
+          <li><a href="#" class="font-semibold text-purple-100 hover:text-gray-300">Donate</a></li>
+        </ul>
+      </div>
+    </nav>
+    
+    <!-- Main Content -->
+    <div class=" py-8">
+        <div class="container mx-auto text-white text-left px-3">
+          <h1 class="text-6xl font-bold mb-4">The Ever For</h1>
+          <p class="text-1xl md:w-1/2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste quam explicabo neque obcaecati voluptatem nesciunt.</p>
+          <div class="mt-8 space-x-4">
+              <button class="px-6 py-3 bg-purple-900 text-white rounded-2xl hover:bg-purple-600">Sign Up</button>
+              <button class="px-6 py-3 outline outline-purple-900 text-white rounded-2xl hover:bg-purple-600">Login</button>
+          </div>
+        </div>
+      </div>
+  </div>
+
+  <div>
+    <div></div>
+  </div>
+
+  <!-- <div class="bg-black">
+    <div>
+        <a href="#" class="flex flex-col items-center">
+            <img src="./images/bgbgbg.jpg" alt="Logo" class="w-12 h-15 mr-2 rounded-full">
+            <span class="text-1xl text-white">Website Name</span>
+          </a>
+    </div>
+  </div> -->
+</body>
+</html>
