@@ -1,5 +1,6 @@
 *{
     font-family: 'Poppins', sans-serif;
+    transition: all .5s;
 }
 *::-webkit-scrollbar{
     display: none;
