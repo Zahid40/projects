@@ -10,24 +10,27 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
-        <script src="https://kit.fontawesome.com/d304302302.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/d304302302.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div class="bg-video-container flex flex-col justify-between p-4 bg-[url('https://lh3.googleusercontent.com/pw/AIL4fc9Sb42dv7xy_htN3blTMpJEvpVwfoOAwKsZ46Kt6sG1-ghEoywP3zJAEQfkssll-Go-MYAzKuQpvP4BbYMd_UVu96vanR-wgemAH0dAGh05aIuoQe0b0pqexwyeJ34buqo3rtMfdVNuylGeQcdyEaYT=w720-h963-s-no?authuser=0')] bg-center bg-no-repeat bg-cover relative w-full"
+    <div class="bg-video-container flex flex-col justify-between p-4 bg-[url('https://media4.giphy.com/media/0oYBxMzAFU3iHhsPk6/giphy.gif?cid=ecf05e472pnz2bqzfsi21hooxby3kggt0w62uw0xydy6bqen&ep=v1_gifs_search&rid=giphy.gif&ct=g')] bg-center bg-no-repeat bg-cover relative w-full"
         style="height: 80vh;">
         <!-- Navbar -->
         <nav class=" py-6 px-5 bg-white bg-opacity-30 backdrop-blur-sm rounded-2xl">
             <div class="container mx-auto flex justify-between items-center">
                 <a href="#" class="flex flex-row items-center">
-                    <img src="https://lh3.googleusercontent.com/pw/AIL4fc9Sb42dv7xy_htN3blTMpJEvpVwfoOAwKsZ46Kt6sG1-ghEoywP3zJAEQfkssll-Go-MYAzKuQpvP4BbYMd_UVu96vanR-wgemAH0dAGh05aIuoQe0b0pqexwyeJ34buqo3rtMfdVNuylGeQcdyEaYT=w720-h963-s-no?authuser=0" alt="Logo" class="w-12 h-15 mr-2 rounded-full">
+                    <img src="https://lh3.googleusercontent.com/pw/AIL4fc9Sb42dv7xy_htN3blTMpJEvpVwfoOAwKsZ46Kt6sG1-ghEoywP3zJAEQfkssll-Go-MYAzKuQpvP4BbYMd_UVu96vanR-wgemAH0dAGh05aIuoQe0b0pqexwyeJ34buqo3rtMfdVNuylGeQcdyEaYT=w720-h963-s-no?authuser=0"
+                        alt="Logo" class="w-12 h-15 mr-2 rounded-full">
                     <!-- <span class="text-2xl font-bold text-purple-900 text-center">BDY</span> -->
                 </a>
                 <ul class="flex space-x-4">
-                    <li><a href="https://zahid40.github.io/" class="font-semibold text-purple-100 hover:text-gray-300">About</a></li>
-                    <li><a href="https://zahid40.github.io/" class="font-semibold text-purple-100 hover:text-gray-300">Developer</a></li>
-                    <li><a href="#" class="font-semibold text-purple-100 hover:text-gray-300">Donate</a></li>
+                    <li><a href="https://zahid40.github.io/"
+                            class="font-semibold text-purple-100 hover:text-gray-300">About</a></li>
+                    <li><a href="https://zahid40.github.io/"
+                            class="font-semibold text-purple-100 hover:text-gray-300">Developer</a></li>
+                    <!-- <li><a href="#" class="font-semibold text-purple-100 hover:text-gray-300">Donate</a></li> -->
                 </ul>
             </div>
         </nav>
@@ -35,17 +38,20 @@
         <!-- Main Content -->
         <div class=" py-8">
             <div class="container mx-auto text-white text-left px-3">
-                <h1 class="text-6xl font-bold mb-4">The Ever For</h1>
-                <p class="text-1xl md:w-1/2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste quam
-                    explicabo neque obcaecati voluptatem nesciunt.</p>
+                <h1 class="text-6xl font-bold mb-4">SDNEIRF</h1>
+                <p class="text-1xl md:w-1/2">"I still have friends from primary school. I don't have to explain anything
+                    to them. I don't have to apologize for anything. They know. There's no judgment in any way." </p>
                 <div class="mt-8 space-x-4">
-                    <button class="px-6 py-3 bg-purple-900 text-white rounded-2xl hover:bg-purple-600">Super</button>
-                    <button
-                        class="px-6 py-3 outline outline-purple-900 text-white rounded-2xl hover:bg-purple-600">Add</button>
+                    <button class="px-6 py-3 bg-purple-500 outline outline-purple-300 text-white rounded-2xl hover:bg-purple-600" onclick="sentmailforhire()">Hire Developer</button>
+                    <!-- <button
+                        class="px-6 py-3 outline outline-purple-900 text-white rounded-2xl hover:bg-purple-600">Add</button> -->
                 </div>
             </div>
         </div>
     </div>
+
+    <!-- bdy  -->
+    <div class=" p-3 outline outline-purple-900 rounded-2xl m-4" id="show_bdy"></div>
 
     <!-- tages  -->
 
@@ -59,9 +65,11 @@
     <div class="p-6">
         <div class="outline outline-purple-900 p-5 grid grid-cols-3 gap-4 rounded-2xl">
             <p class="col-span-1 text-4xl text-left text-purple-900 col-span-1">Gallery</p>
-            <div class="col-span-2 relative top-0 left-0 text-purple-900 flex justify-end" id="button"><i class="fa fa-chevron-up fa-2x"></i></div>
+            <div class="col-span-2 relative top-0 left-0 text-purple-900 flex justify-end" id="button"><i
+                    class="fa fa-chevron-up fa-2x"></i></div>
             <div id="gallery_listen" class="col-span-3 ">
-                <p class="col-span-4 text-sm pb-4 text-left text-purple-900 flex items-center">Tap to see<i class="fa fa-arrow-circle-right fa-3x m-2"></i></p>
+                <p class="col-span-4 text-sm pb-4 text-left text-purple-900 flex items-center">Tap to see<i
+                        class="fa fa-arrow-circle-right fa-3x m-2"></i></p>
             </div>
             <div id="gallery" class=" col-span-3 grid grid-cols-3 gap-4"></div>
         </div>
@@ -71,16 +79,21 @@
     <footer class="w-full bg-purple-100 p-3">
         <div class="flex flex-col items-center outline outline-purple-300 rounded-2xl p-4">
             <a href="#" class="flex flex-col items-center">
-                <img src="https://lh3.googleusercontent.com/pw/AIL4fc9Sb42dv7xy_htN3blTMpJEvpVwfoOAwKsZ46Kt6sG1-ghEoywP3zJAEQfkssll-Go-MYAzKuQpvP4BbYMd_UVu96vanR-wgemAH0dAGh05aIuoQe0b0pqexwyeJ34buqo3rtMfdVNuylGeQcdyEaYT=w720-h963-s-no?authuser=0" alt="Logo" class="w-12 h-15 mr-2 rounded-full">
+                <img src="https://lh3.googleusercontent.com/pw/AIL4fc9Sb42dv7xy_htN3blTMpJEvpVwfoOAwKsZ46Kt6sG1-ghEoywP3zJAEQfkssll-Go-MYAzKuQpvP4BbYMd_UVu96vanR-wgemAH0dAGh05aIuoQe0b0pqexwyeJ34buqo3rtMfdVNuylGeQcdyEaYT=w720-h963-s-no?authuser=0"
+                    alt="Logo" class="w-12 h-15 mr-2 rounded-full">
                 <!-- <span class="text-2xl font-bold text-purple-900 text-center">BDY</span> -->
             </a>
-            <p class="text-purple-600 text-center text-sm md:w-1/2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, iure unde? Corrupti aliquid ex, necessitatibus molestiae cupiditate officiis? Molestias dolorum quaerat eius enim voluptate unde.</p>
+            <p class="text-purple-600 text-center text-sm md:w-1/2 p-2">"I still have friends from primary school. I don't have to explain anything
+                to them. I don't have to apologize for anything. They know. There's no judgment in any way."</p>
         </div>
-        <div class="bg-[url('https://lh3.googleusercontent.com/pw/AIL4fc_xMoC03BS17GaRJMH4iiwr9kKBBgoAyC9WbQoZjBW-LAUqlNoiIH1n2fDzoqT2r05imU-ZaGWp42Enqp5Lit22bICR8FPkvc_AnxnwRh_4gNDMpDcjRbpDC44Lz6ZU0RougXHWCAVDr8XInautEdGe=w1604-h963-s-no?authuser=0')] bg-center bg-no-repeat bg-contain w-full h-80 mix-blend-multiply"></div>
+        <div
+            class="bg-[url('https://lh3.googleusercontent.com/pw/AIL4fc_xMoC03BS17GaRJMH4iiwr9kKBBgoAyC9WbQoZjBW-LAUqlNoiIH1n2fDzoqT2r05imU-ZaGWp42Enqp5Lit22bICR8FPkvc_AnxnwRh_4gNDMpDcjRbpDC44Lz6ZU0RougXHWCAVDr8XInautEdGe=w1604-h963-s-no?authuser=0')] bg-center bg-no-repeat bg-contain w-full h-80 mix-blend-multiply">
+        </div>
         <p class="text-1xl text-center text-purple-600 text-sm font-bold">Social</p>
         <div class="space-x-4 py-4 flex flex-row justify-center outline outline-purple-300 rounded-2xl m-2">
             <a href="https://github.com/Zahid40" class="text-4xl text-purple-900"><i class="fa fa-github"></i></a>
-            <a href="https://www.instagram.com/its_zahid83/" class="text-4xl text-purple-900"><i class="fa fa-instagram"></i></a>
+            <a href="https://www.instagram.com/its_zahid83/" class="text-4xl text-purple-900"><i
+                    class="fa fa-instagram"></i></a>
             <a href="https://zahid40.github.io/" class="text-4xl text-purple-900"><i class="fa fa-globe"></i></a>
         </div>
         <p class="text-1xl text-center text-purple-600 text-sm">Hosting with Github</p>

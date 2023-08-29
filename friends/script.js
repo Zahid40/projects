@@ -1,35 +1,43 @@
 let legends_wala_arr = {
     "Zahid": {
         "dob": "2005-02-03T18:30:00.000Z",
-        "image_url": "https://lh3.googleusercontent.com/pw/AIL4fc915JPvENSCmN2A4kbCiuBt0viqIFijMmjlAn1bPeWVCDsyuZMKDFUH9zhGieTxLvgzyB0lGZK9himDvYqmdsEfQQrMk_uZO1wkS11LLmtrakXWbvea1OlWR5KqF1mBCbC0fJ0YXu0O0kLLQW8BBo60=w541-h963-s-no?authuser=0"
+        "image_url": "https://lh3.googleusercontent.com/pw/AIL4fc915JPvENSCmN2A4kbCiuBt0viqIFijMmjlAn1bPeWVCDsyuZMKDFUH9zhGieTxLvgzyB0lGZK9himDvYqmdsEfQQrMk_uZO1wkS11LLmtrakXWbvea1OlWR5KqF1mBCbC0fJ0YXu0O0kLLQW8BBo60=w541-h963-s-no?authuser=0",
+        "insta": "https://www.instagram.com/its_zahid83/"
     },
     "Jaideep": {
         "dob": "2004-08-26T18:30:00.000Z",
-        "image_url": "https://lh3.googleusercontent.com/pw/AIL4fc9Uicwp8tOMdqd-nT-znCkNl6RDrTbK3L1Wg1zH4gWmZzce4PTXd5l-z0WX5-5MuenTmxzBykpj_ZxGo9UQs7h0_ump_8ZbOxO4EW1s3i6xqZ1c_Kk8XguwqDhJxhl_cjsZeJpP5aFxSHWtaZkwcOXH=w722-h963-s-no?authuser=0"
+        "image_url": "https://lh3.googleusercontent.com/pw/AIL4fc9Uicwp8tOMdqd-nT-znCkNl6RDrTbK3L1Wg1zH4gWmZzce4PTXd5l-z0WX5-5MuenTmxzBykpj_ZxGo9UQs7h0_ump_8ZbOxO4EW1s3i6xqZ1c_Kk8XguwqDhJxhl_cjsZeJpP5aFxSHWtaZkwcOXH=w722-h963-s-no?authuser=0",
+        "insta" : "https://www.instagram.com/jd_shakya_/"
     },
     "Sandeep": {
         "dob": "2004-08-26T18:30:00.000Z",
-        "image_url": "https://lh3.googleusercontent.com/pw/AIL4fc9tnUQeJRRDoIS2fxWnpPlpEhfQnDr4PXOzvmGdjZmbcUpwqztVaBP0JcC4zTjn1kJkwJGOhFokQamBFkj1j9hL92CK-J5ZpaLYdaQxMsOFYgwZPwrd86bYCv6Q2f-Ly2uIe_9lfdoQeONY4HtOcpcPAg=w722-h963-s-no?authuser=0"
+        "image_url": "https://lh3.googleusercontent.com/pw/AIL4fc9tnUQeJRRDoIS2fxWnpPlpEhfQnDr4PXOzvmGdjZmbcUpwqztVaBP0JcC4zTjn1kJkwJGOhFokQamBFkj1j9hL92CK-J5ZpaLYdaQxMsOFYgwZPwrd86bYCv6Q2f-Ly2uIe_9lfdoQeONY4HtOcpcPAg=w722-h963-s-no?authuser=0",
+        "insta" : "https://www.instagram.com/sandeepkushwaha_18/"
     },
     "Vipin": {
         "dob": "2004-09-04T18:30:00.000Z",
-        "image_url": "https://lh3.googleusercontent.com/pw/AIL4fc8ANrppvu8zbJHYZ4o7e2HAKslOS_1bt5A6JVXdlc63EYoS2qMIJRM-LFeUOItyIL3mHctAm8f-R3DRzxjJCUVmtoNbIklr-WCxSb6UQqohHemwbNlK9dVP6YELlEn8QA-GesuVHGFmI5ZqjfxVKlck=w722-h963-s-no?authuser=0"
+        "image_url": "https://lh3.googleusercontent.com/pw/AIL4fc8ANrppvu8zbJHYZ4o7e2HAKslOS_1bt5A6JVXdlc63EYoS2qMIJRM-LFeUOItyIL3mHctAm8f-R3DRzxjJCUVmtoNbIklr-WCxSb6UQqohHemwbNlK9dVP6YELlEn8QA-GesuVHGFmI5ZqjfxVKlck=w722-h963-s-no?authuser=0",
+        "insta" : "https://www.instagram.com/vip.in.0001/"
     },
     "Arvind": {
         "dob": "2004-09-05T18:30:00.000Z",
-        "image_url": "https://lh3.googleusercontent.com/pw/AIL4fc89gbqso1uESi3uXwZzrjswQJvdyDLVVc0rtJ7V3xHRK_08TglKrRCIZCjR_UBl50WTKWoonyQZVsNbD1mDldCy7hDJ7_dZCHfas3ehtWOUkSwEq92A3XVsWtxINxwvfWShoj7_6oLQzA-6wHdLawRi=w1710-h963-s-no?authuser=0"
+        "image_url": "https://lh3.googleusercontent.com/pw/AIL4fc902T2zUnOmhhK71mHGLL2hmZWAeSHtOA_Jo-X-tPJ0Bjpr3MeWx64-nQa9LTbad4L5T7TzoywUaUz87vs1whE1AeHVKFj4McaCbEfXlvziclWDXG-tdj1oyKHBmK-W-iiF58R6gBFGmt49bD2ek346=w722-h963-s-no?authuser=0",
+        "insta" : ""
     },
     "Rehan": {
         "dob": "2004-09-03T18:30:00.000Z",
-        "image_url": "https://lh3.googleusercontent.com/pw/AIL4fc9MBHp6Zg0jV48Y2ZAW6an5gF3ySnMeKRf8HrLLuUE0ZTtpSrF-s9dxJDJu3s-RxFtH6Xo4tbIonrU91Va2NFQuv7XodUpH6ueijXbqRkqMRD5A9veY6nXwINuJoZhuDQnxX3By7mrO9WhqYS4pC0vz=w722-h963-s-no?authuser=0"
+        "image_url": "https://lh3.googleusercontent.com/pw/AIL4fc9MBHp6Zg0jV48Y2ZAW6an5gF3ySnMeKRf8HrLLuUE0ZTtpSrF-s9dxJDJu3s-RxFtH6Xo4tbIonrU91Va2NFQuv7XodUpH6ueijXbqRkqMRD5A9veY6nXwINuJoZhuDQnxX3By7mrO9WhqYS4pC0vz=w722-h963-s-no?authuser=0",
+        "insta" : ""
     },
     "Amit": {
         "dob": "2004-12-08T18:30:00.000Z",
-        "image_url": "https://lh3.googleusercontent.com/pw/AIL4fc83ZxqGrjSyaXdiO_WfYoSj837VNTtpa-u1l1c9sZdT64CWMyddrKLMdYGEk8PCjQTngtUbU-estr5QyDKHNoX4S4aErOaRJElYeZ93Tn08l4tXW-isAquZkQtvsc_bSfUbhoDpMJJohyepcbBVg_eK=w1357-h963-s-no?authuser=0"
+        "image_url": "https://lh3.googleusercontent.com/pw/AIL4fc_1JJbJyTF0AKoI75tobJRsbKAr6GBCeZxle5a1USrHVy5PmxhCddbgo0hXh7ImEuYdtvuZ5zW2uIK-V90wFFnh6ezdqds2HmHzY9HFXOYI4wmnTJBnxgNqicyHtLjq8oS901j3K2jCeEz74dT9mBNL=w722-h963-s-no?authuser=0",
+        "insta" : "https://www.instagram.com/professor.x.boy/"
     },
     "Aman": {
         "dob": "2004-05-07T18:30:00.000Z",
-        "image_url": "https://lh3.googleusercontent.com/pw/AIL4fc-7sZLLYSZV8vRX8w_By3WO9OmGi6E4FcpxsXSF4zRzLgYWX4lp2H_GktPStqjAcWDZ93IzNAjwReIH-v04CqH2ZSKISA_bIzT4l_lgUnxbg9NbZujq-eyuFpgISNkLF0COSlBc6ztugribY9b7uGzgKg=w722-h963-s-no?authuser=0"
+        "image_url": "https://lh3.googleusercontent.com/pw/AIL4fc-7sZLLYSZV8vRX8w_By3WO9OmGi6E4FcpxsXSF4zRzLgYWX4lp2H_GktPStqjAcWDZ93IzNAjwReIH-v04CqH2ZSKISA_bIzT4l_lgUnxbg9NbZujq-eyuFpgISNkLF0COSlBc6ztugribY9b7uGzgKg=w722-h963-s-no?authuser=0",
+        "insta" : "https://www.instagram.com/amann._.nn/"
     }
 }
 
@@ -50,20 +58,20 @@ function updateLegends() {
 
     for (const name in legends_wala_arr) {
         if (legends_wala_arr.hasOwnProperty(name)) {
-            const { dob, image_url } = legends_wala_arr[name];
+            const { dob, image_url , insta } = legends_wala_arr[name];
             const dobDate = new Date(dob);
-            let month_arr = ['January' , 'Febuary' , 'March' , 'April' , 'May' , 'June' , 'July' , 'August' , 'September', 'October' , 'November' , 'December']
+            let month_arr = ['January', 'Febuary', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
             const formattedDate = `${dobDate.getDate()} ${month_arr[dobDate.getMonth()]} ${dobDate.getFullYear()}`;
 
-            // const currentDate = new Date();
-            // console.log(dob);
             const ageDetails = calculateAgeDetails(dob);
 
-            legends.innerHTML += `<div class="legend flex flex-col items-center col-span-1 p-4 font-light">
+            legends.innerHTML += `<div class="legend flex flex-col items-center col-span-1 p-1 font-light">
                 <img src="${image_url}" alt="Logo" class="w-16 h-24 mr-2 rounded-full">
                 <span class="text-1xl text-purple-900">${name}</span>
                 <p class="text-1xl text-purple-700 text-center hidden font-bold">DOB : ${formattedDate}</p>
-                <p class="text-1xl text-purple-700 text-center hidden font-bold outline outline-purple-600 m-2 p-3 rounded-2xl">Upcoming Birthday in ${12 - (ageDetails.months == 0 ? ageDetails.months + 1 : ageDetails.months)} months ${30 - (ageDetails.days == 0 ? ageDetails.days + 1 : ageDetails.days)} days ${24-(ageDetails.hours == 0 ? ageDetails.hours + 1 : ageDetails.hours )} hours ${60 - (ageDetails.minutes == 0 ? ageDetails.minutes + 1 : ageDetails.minutes)} minutes</p>
+                <p  class="text-1xl text-purple-700 text-center hidden font-bold bg-purple-200 px-4 py-2 rounded-2xl outline outline-purple-300"><a href="${insta}"><i
+                class="fa fa-instagram"></i> ${name}</a></p>
+                <p class="text-1xl text-purple-700 text-center hidden font-bold outline outline-purple-600 m-2 p-3 rounded-2xl">Upcoming Birthday in ${11 - (ageDetails.months == 0 ? ageDetails.months + 1 : ageDetails.months)} months ${30 - (ageDetails.days == 0 ? ageDetails.days + 1 : ageDetails.days)} days ${23 - (ageDetails.hours == 0 ? ageDetails.hours + 1 : ageDetails.hours)} hours ${60 - (ageDetails.minutes == 0 ? ageDetails.minutes + 1 : ageDetails.minutes)} minutes</p>
                 <p class="text-1xl text-purple-500 text-center hidden font-bold outline outline-purple-600 m-2 p-3 rounded-2xl">${ageDetails.years} years, ${ageDetails.months} months, ${ageDetails.days} days, ${ageDetails.hours} hours, ${ageDetails.minutes} minutes on Earth</p>
             </div>`;
         }
@@ -144,7 +152,8 @@ function calculateAgeDetails(dob_user) {
     var currentMinutes = now.getMinutes();
 
     //get years  
-    yearAge = currentYear - dobYear;
+    var yearAge = currentYear - dobYear;
+
     //get months  
     if (currentMonth >= dobMonth)
         //get months when current month is greater  
@@ -153,6 +162,8 @@ function calculateAgeDetails(dob_user) {
         yearAge--;
         var monthAge = 12 + currentMonth - dobMonth;
     }
+    //upcoming month
+
 
     //get days  
     if (currentDate >= dobDate)
@@ -167,7 +178,6 @@ function calculateAgeDetails(dob_user) {
             yearAge--;
         }
     }
-
 
     //get hours
     var hourAge;
@@ -211,17 +221,36 @@ function calculateAgeDetails(dob_user) {
 }
 
 
+
 // Initial update
 updateLegends();
 
 // Update every minute
 setInterval(updateLegends, 60000); // 60000 milliseconds = 1 minute
 
+const keyToAccess = "Rehan";
+const value = legends_wala_arr[keyToAccess];
+let bdywishdiv = document.getElementById('show_bdy');
+bdywishdiv.classList.add('hidden')
+bdywishdiv.innerHTML = `<div class="h-auto w-full grid grid-cols-4 gap-4 bg-[url('https://media0.giphy.com/media/26uflUz6WAyr68FcQ/giphy.gif?cid=ecf05e47jbhcsvyxkkxsk9bbsqotj4jzvok459p2ypwlb3p4&ep=v1_gifs_search&rid=giphy.gif&ct=g')] bg-center bg-cover rounded-2xl">
+<img src="${value.image_url}" alt="Logo" class="w-full  mr-2 rounded-full col-span-2">
+<div class="col-span-2 bg-purple-100 rounded-full p-4 flex flex-col item-center justify-center bg-opacity-30 backdrop-blur-md" >
+<p class="font-bold text-3xl text-purple-500 text-center">Happy Birthday ${keyToAccess}</p>
+<p class="font-bold text-1xl text-purple-500 text-center">&#x1F601;&#x1F601;&#127874;&#127874;	&#127881;&#127881;<br> “Happy birthday! I hope all your birthday wishes and dreams come true.”</p>
+</div>
+<div class="bg-transparent-300 h-auto "></div>
+</div>`;
 
 
-
-
-
+function sentmailforhire (){ 
+    let recipient = " zahidanasari17@gmail.com"; var subject=encodeURIComponent("Hiring for work!"); var
+                       body=encodeURIComponent( "Dear [Candidate's Name],\n\n"
+                       + "We're reaching out to you because we're impressed by your skills. We have an exciting opportunity at [Company Name] that we believe you'd be a great fit for our work.\n\n"
+                       + "Location: [Office Location or Remote]\n" + "Skills: [Key Skills/Technologies]\n\n"
+                       + "If you're interested in learning more, please reply to this email. We'd love to discuss how your expertise could contribute to our success.\n\n"
+                       + "Looking forward to connecting,\n\n" + "[Your Name]\n" + "[Your Title]\n" + "[Company Name]\n"
+                       + "[Email Address]\n" + "[Phone Number]" ); var mailtoLink="mailto:" + recipient + "?subject=" +
+                       subject + "&body=" + body; window.location.href=mailtoLink; }
 
 
 
