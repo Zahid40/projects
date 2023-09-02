@@ -1,42 +1,42 @@
 let legends_wala_arr = {
     "Zahid": {
         "dob": "2005-02-03T18:30:00.000Z",
-        "image_url": "https://lh3.googleusercontent.com/pw/AIL4fc915JPvENSCmN2A4kbCiuBt0viqIFijMmjlAn1bPeWVCDsyuZMKDFUH9zhGieTxLvgzyB0lGZK9himDvYqmdsEfQQrMk_uZO1wkS11LLmtrakXWbvea1OlWR5KqF1mBCbC0fJ0YXu0O0kLLQW8BBo60=w541-h963-s-no?authuser=0",
+        "image_url": "https://lh3.googleusercontent.com/pw/AIL4fc-BVnxzGm_t-tp-_bqUyKgCldbDwJBNwurHGgkCcvrrgK0KNetYJ1fkldoWgqT0R52mJe2ZMUEp8tipMvPBrB08RZexnhV-gRmlu6d_BupRTTmhtV9c58CpBlqWe-jguAXNj1J2BQfjHj8uu2jCWzHZ=w541-h963-s-no?authuser=0",
         "insta": "https://www.instagram.com/its_zahid83/"
     },
     "Jaideep": {
         "dob": "2004-08-26T18:30:00.000Z",
-        "image_url": "https://lh3.googleusercontent.com/pw/AIL4fc9Uicwp8tOMdqd-nT-znCkNl6RDrTbK3L1Wg1zH4gWmZzce4PTXd5l-z0WX5-5MuenTmxzBykpj_ZxGo9UQs7h0_ump_8ZbOxO4EW1s3i6xqZ1c_Kk8XguwqDhJxhl_cjsZeJpP5aFxSHWtaZkwcOXH=w722-h963-s-no?authuser=0",
+        "image_url": "https://lh3.googleusercontent.com/pw/AIL4fc-x0O97MqLgbCV9-GvOJDbBriDq19AwMD4cEmnjE3HkDS7dJdvz4YpctqCyTYUkvJBCFtPmCqVrRfRZB7rQTclWcu4Emau-DSgAqE19AC-Ke5QQtOILC0oBS5XBaaJHQ1LTj3BrV-i4dKO0nqP-3ag4=w722-h963-s-no?authuser=0",
         "insta" : "https://www.instagram.com/jd_shakya_/"
     },
     "Sandeep": {
         "dob": "2004-08-26T18:30:00.000Z",
-        "image_url": "https://lh3.googleusercontent.com/pw/AIL4fc9tnUQeJRRDoIS2fxWnpPlpEhfQnDr4PXOzvmGdjZmbcUpwqztVaBP0JcC4zTjn1kJkwJGOhFokQamBFkj1j9hL92CK-J5ZpaLYdaQxMsOFYgwZPwrd86bYCv6Q2f-Ly2uIe_9lfdoQeONY4HtOcpcPAg=w722-h963-s-no?authuser=0",
+        "image_url": "https://lh3.googleusercontent.com/pw/AIL4fc-OYddcMyOt2dj8p7nFA4lwHg0aWeaA7WGiDCtas85UNcfdRzbhv1tZzsoMpsRQMrEs3wRlldjjMNpchAgapvdwL60SKj6rZ7OKV8YGuBtivkNa-2cMPmojIYbsrGWvqynkxi_uJFKy6UgES94ABvtgYA=w722-h963-s-no?authuser=0",
         "insta" : "https://www.instagram.com/sandeepkushwaha_18/"
     },
     "Vipin": {
         "dob": "2004-09-04T18:30:00.000Z",
-        "image_url": "https://lh3.googleusercontent.com/pw/AIL4fc8ANrppvu8zbJHYZ4o7e2HAKslOS_1bt5A6JVXdlc63EYoS2qMIJRM-LFeUOItyIL3mHctAm8f-R3DRzxjJCUVmtoNbIklr-WCxSb6UQqohHemwbNlK9dVP6YELlEn8QA-GesuVHGFmI5ZqjfxVKlck=w722-h963-s-no?authuser=0",
+        "image_url": "https://lh3.googleusercontent.com/pw/AIL4fc-f3NZaF73UtzEJgoZ7GKE_n8IQ2phhz2lmJxxSv7-xwybE8rwtdZvMIChyyaW4KMIkHGgnGZoyMEVU_rdzIkkSzbTO4eUD_-eLRXLhYXS_8SwdG6xB9-LneogZnTP5-WwJN5HODFqhHnw-Pw0rj4_l=w722-h963-s-no?authuser=0",
         "insta" : "https://www.instagram.com/vip.in.0001/"
     },
     "Arvind": {
         "dob": "2004-09-05T18:30:00.000Z",
-        "image_url": "https://lh3.googleusercontent.com/pw/AIL4fc902T2zUnOmhhK71mHGLL2hmZWAeSHtOA_Jo-X-tPJ0Bjpr3MeWx64-nQa9LTbad4L5T7TzoywUaUz87vs1whE1AeHVKFj4McaCbEfXlvziclWDXG-tdj1oyKHBmK-W-iiF58R6gBFGmt49bD2ek346=w722-h963-s-no?authuser=0",
+        "image_url": "https://lh3.googleusercontent.com/pw/AIL4fc8XO4fFoS4jdxC4z0W2t9zBWFKEUJRUWYkoY1KJQ_xi5X2JTpZ_qELokMhrnFNj7UdIcEsuMfB0lZTugRvyCEJ-cptBXf87S5Ueq9eTpBBTqMeU0FPb95uvYN_xJGRLitdEWGZZEeo4M2gWZ2VlPCCr=w1710-h963-s-no?authuser=0",
         "insta" : ""
     },
     "Rehan": {
         "dob": "2004-09-03T18:30:00.000Z",
-        "image_url": "https://lh3.googleusercontent.com/pw/AIL4fc9MBHp6Zg0jV48Y2ZAW6an5gF3ySnMeKRf8HrLLuUE0ZTtpSrF-s9dxJDJu3s-RxFtH6Xo4tbIonrU91Va2NFQuv7XodUpH6ueijXbqRkqMRD5A9veY6nXwINuJoZhuDQnxX3By7mrO9WhqYS4pC0vz=w722-h963-s-no?authuser=0",
+        "image_url": "https://lh3.googleusercontent.com/pw/AIL4fc8UM0F5Uaew8QvPru1M34OzmFqWUQU6-i_T8bhXxz6mSpc0Y1UzipDiO9-hUMbQagmRGQQKFlfV3uZUgs2ev0DHPTO5_ry1PeQ_21FyIsPBlHcvTfauIV1MIbfnohEtq9E8Y6ELzTPSDJX4rWrU7f7G=w722-h963-s-no?authuser=0",
         "insta" : ""
     },
     "Amit": {
         "dob": "2004-12-08T18:30:00.000Z",
-        "image_url": "https://lh3.googleusercontent.com/pw/AIL4fc_1JJbJyTF0AKoI75tobJRsbKAr6GBCeZxle5a1USrHVy5PmxhCddbgo0hXh7ImEuYdtvuZ5zW2uIK-V90wFFnh6ezdqds2HmHzY9HFXOYI4wmnTJBnxgNqicyHtLjq8oS901j3K2jCeEz74dT9mBNL=w722-h963-s-no?authuser=0",
+        "image_url": "https://lh3.googleusercontent.com/pw/AIL4fc_I4dYf3BCOih8SkIaF_vyS0Tv_YDExYNKj5uOlx7DuQ3hDh4TzxQ5vSwDk0rcHymJhVbArxFEktmFSbEFvY4dIE3-cSXzBALHx7oZ6Nut8FlpYLalwLCMUvvmycs5OXYewKWFUvrsr884rNMYpjgKF=w1712-h963-s-no?authuser=0",
         "insta" : "https://www.instagram.com/professor.x.boy/"
     },
     "Aman": {
         "dob": "2004-05-07T18:30:00.000Z",
-        "image_url": "https://lh3.googleusercontent.com/pw/AIL4fc-7sZLLYSZV8vRX8w_By3WO9OmGi6E4FcpxsXSF4zRzLgYWX4lp2H_GktPStqjAcWDZ93IzNAjwReIH-v04CqH2ZSKISA_bIzT4l_lgUnxbg9NbZujq-eyuFpgISNkLF0COSlBc6ztugribY9b7uGzgKg=w722-h963-s-no?authuser=0",
+        "image_url": "https://lh3.googleusercontent.com/pw/AIL4fc9V06ARCZwfp11GV7fJkPUHhiibAGSjCghCBobK_XTpmYIVcOQCyN8VITqjk9HnnwWWzWot7y9F3hUUXwWBi4IcXq481dQORKnmpxarWs4hoVYCvXSjQvR4cMlb19jI1fS3TIfaFp3Ckus9m2Z7mxw-fQ=w722-h963-s-no?authuser=0",
         "insta" : "https://www.instagram.com/amann._.nn/"
     }
 }
