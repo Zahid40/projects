@@ -1,42 +1,42 @@
 let legends_wala_arr = {
     "Zahid": {
         "dob": "2005-02-03T18:30:00.000Z",
-        "image_url": "https://lh3.googleusercontent.com/pw/AIL4fc-BVnxzGm_t-tp-_bqUyKgCldbDwJBNwurHGgkCcvrrgK0KNetYJ1fkldoWgqT0R52mJe2ZMUEp8tipMvPBrB08RZexnhV-gRmlu6d_BupRTTmhtV9c58CpBlqWe-jguAXNj1J2BQfjHj8uu2jCWzHZ=w541-h963-s-no?authuser=0",
+        "image_url": "./images/zahid.jpg",
         "insta": "https://www.instagram.com/its_zahid83/"
     },
     "Jaideep": {
         "dob": "2004-08-26T18:30:00.000Z",
-        "image_url": "https://lh3.googleusercontent.com/pw/AIL4fc-x0O97MqLgbCV9-GvOJDbBriDq19AwMD4cEmnjE3HkDS7dJdvz4YpctqCyTYUkvJBCFtPmCqVrRfRZB7rQTclWcu4Emau-DSgAqE19AC-Ke5QQtOILC0oBS5XBaaJHQ1LTj3BrV-i4dKO0nqP-3ag4=w722-h963-s-no?authuser=0",
+        "image_url": "./images/jaideep.jpeg",
         "insta" : "https://www.instagram.com/jd_shakya_/"
     },
     "Sandeep": {
         "dob": "2004-08-26T18:30:00.000Z",
-        "image_url": "https://lh3.googleusercontent.com/pw/AIL4fc-OYddcMyOt2dj8p7nFA4lwHg0aWeaA7WGiDCtas85UNcfdRzbhv1tZzsoMpsRQMrEs3wRlldjjMNpchAgapvdwL60SKj6rZ7OKV8YGuBtivkNa-2cMPmojIYbsrGWvqynkxi_uJFKy6UgES94ABvtgYA=w722-h963-s-no?authuser=0",
+        "image_url": "./images/sandeep.jpg",
         "insta" : "https://www.instagram.com/sandeepkushwaha_18/"
     },
     "Vipin": {
         "dob": "2004-09-04T18:30:00.000Z",
-        "image_url": "https://lh3.googleusercontent.com/pw/AIL4fc-f3NZaF73UtzEJgoZ7GKE_n8IQ2phhz2lmJxxSv7-xwybE8rwtdZvMIChyyaW4KMIkHGgnGZoyMEVU_rdzIkkSzbTO4eUD_-eLRXLhYXS_8SwdG6xB9-LneogZnTP5-WwJN5HODFqhHnw-Pw0rj4_l=w722-h963-s-no?authuser=0",
+        "image_url": "./images/vipin.jpg",
         "insta" : "https://www.instagram.com/vip.in.0001/"
     },
     "Arvind": {
         "dob": "2004-09-05T18:30:00.000Z",
-        "image_url": "https://lh3.googleusercontent.com/pw/AIL4fc8XO4fFoS4jdxC4z0W2t9zBWFKEUJRUWYkoY1KJQ_xi5X2JTpZ_qELokMhrnFNj7UdIcEsuMfB0lZTugRvyCEJ-cptBXf87S5Ueq9eTpBBTqMeU0FPb95uvYN_xJGRLitdEWGZZEeo4M2gWZ2VlPCCr=w1710-h963-s-no?authuser=0",
+        "image_url": "./images/arvind.jpg",
         "insta" : ""
     },
     "Rehan": {
         "dob": "2004-09-03T18:30:00.000Z",
-        "image_url": "https://lh3.googleusercontent.com/pw/AIL4fc8UM0F5Uaew8QvPru1M34OzmFqWUQU6-i_T8bhXxz6mSpc0Y1UzipDiO9-hUMbQagmRGQQKFlfV3uZUgs2ev0DHPTO5_ry1PeQ_21FyIsPBlHcvTfauIV1MIbfnohEtq9E8Y6ELzTPSDJX4rWrU7f7G=w722-h963-s-no?authuser=0",
+        "image_url": "./images/rehan.jpg",
         "insta" : ""
     },
     "Amit": {
         "dob": "2004-12-08T18:30:00.000Z",
-        "image_url": "https://lh3.googleusercontent.com/pw/AIL4fc_I4dYf3BCOih8SkIaF_vyS0Tv_YDExYNKj5uOlx7DuQ3hDh4TzxQ5vSwDk0rcHymJhVbArxFEktmFSbEFvY4dIE3-cSXzBALHx7oZ6Nut8FlpYLalwLCMUvvmycs5OXYewKWFUvrsr884rNMYpjgKF=w1712-h963-s-no?authuser=0",
+        "image_url": "./images/amit.jpg",
         "insta" : "https://www.instagram.com/professor.x.boy/"
     },
     "Aman": {
         "dob": "2004-05-07T18:30:00.000Z",
-        "image_url": "https://lh3.googleusercontent.com/pw/AIL4fc9V06ARCZwfp11GV7fJkPUHhiibAGSjCghCBobK_XTpmYIVcOQCyN8VITqjk9HnnwWWzWot7y9F3hUUXwWBi4IcXq481dQORKnmpxarWs4hoVYCvXSjQvR4cMlb19jI1fS3TIfaFp3Ckus9m2Z7mxw-fQ=w722-h963-s-no?authuser=0",
+        "image_url": "./images/aman.jpg",
         "insta" : "https://www.instagram.com/amann._.nn/"
     }
 }
@@ -228,10 +228,10 @@ updateLegends();
 // Update every minute
 setInterval(updateLegends, 60000); // 60000 milliseconds = 1 minute
 
-const keyToAccess = "Rehan";
+const keyToAccess = "Vipin";
 const value = legends_wala_arr[keyToAccess];
 let bdywishdiv = document.getElementById('show_bdy');
-bdywishdiv.classList.add('hidden')
+// bdywishdiv.classList.add('hidden')
 bdywishdiv.innerHTML = `<div class="h-auto w-full grid grid-cols-4 gap-4 bg-[url('https://media0.giphy.com/media/26uflUz6WAyr68FcQ/giphy.gif?cid=ecf05e47jbhcsvyxkkxsk9bbsqotj4jzvok459p2ypwlb3p4&ep=v1_gifs_search&rid=giphy.gif&ct=g')] bg-center bg-cover rounded-2xl">
 <img src="${value.image_url}" alt="Logo" class="w-full  mr-2 rounded-full col-span-2">
 <div class="col-span-2 bg-purple-100 rounded-full p-4 flex flex-col item-center justify-center bg-opacity-30 backdrop-blur-md" >
