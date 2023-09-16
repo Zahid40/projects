@@ -18,20 +18,29 @@
             padding: 0;
             font-family: 'Poppins', sans-serif;
         }
+        *:focus{
+            outline: none;
+        }
+        *::-webkit-scrollbar{
+            display: none;
+        }
     </style>
 </head>
 
 <body
-    class="flex flex-col justify-center items-center p-10 ">
-    <div id="code_show" class="text-4xl"></div>
-    <div id="code_div" class="h-40 w-4/5 shadow-lg rounded-full flex flex-col justify-center items-center p-10">
+    class="flex flex-col justify-center items-center p-10">
+    <div id="code_show" class="copyable " ></div>
+    <div id="code_div" class="h-40 w-full shadow-lg rounded-full flex flex-col justify-center items-center p-10 m-2">
+    </div>
+    <div id="code_div_alpha">
     </div>
 
-    <div id="code_div_alpha"
-        class=" flex flex-col h-96 w-4/5 justify-center items-center shadow-lg rounded-3xl overflow-hidden text-center m-4 bg-white">
+    <button id="random_btn" class=" rounded-full p-4  shadow-lg font-bold w-3/5 h-20 mt-6 outline-none" onclick="gen_ram_color()">Random Color</button>
+    <div class="fixed bottom-0 w-full p-3 flex justify-evenly items-center">
+        <a class="font-semibold text-1xl text-white" href="https://www.instagram.com/its_zahid83/">Instagram</a>
+        <a class="font-semibold text-1xl text-white" href="https://github.com/Zahid40">Github</a>
+        <a class="font-semibold text-1xl text-white" href="https://github.com/Zahid40">Developed by Zahid</a>
     </div>
-
-    <button id="random_btn" class=" rounded-full p-4  shadow-lg font-bold w-4/5 h-20" onclick="gen_ram_color()">Random Color</button>
 
     <script>
         let color_body = document.getElementById('code_div');
@@ -120,18 +129,23 @@
             btn_r.style.color = randomColor_final + '80%';
             color_body.style.backgroundColor = `${randomColor_final_u}`;
             heading.innerHTML = `
-            <h2 class="text-[${hslToHex(randomColor_final_u)}] rounded-full py-4 px-6 font-bold text-9xl">${random_hex}</h2>
+            <h2 class="text-[${hslToHex(randomColor_final_u)}] rounded-full py-4 px-6 font-bold text-5xl md:text-8xl">${random_hex}</h2>
             `;
+
+            color_body_alpha.classList = `outline-[${hslToHex(randomColor_final_u)}] flex flex-col h-auto w-full justify-center items-center shadow-lg text-center  rounded-3xl mt-6 outline outline-1 overflow-hidden`;
 
 
             for (let index = 0; index < alpha_arr.length; index++) {
                 let div = document.createElement('div');
-                div.classList = 'h-full w-full flex justify-center items-center ';
+                div.classList = 'h-14 w-full flex justify-end items-center ';
                 let colors_shades_hsl = randomColor_final + alpha_arr[index];
-                div.style.backgroundColor = `${colors_shades_hsl}`;
-                div.innerHTML = `<p class="font-semibold text-2xl">${hslToHex(colors_shades_hsl)}</p>`;
+                div.innerHTML = `
+                <div class="copyable font-semibold text-2xl h-12 w-1/2 p-2 text-[${hslToHex(randomColor_final_u)}] rounded-l-3xl flex justify-start items-center">${hslToHex(colors_shades_hsl)}</div>
+                <div class="w-4/5 h-full bg-[${hslToHex(colors_shades_hsl)}] "></div>
+                `;
                 color_body_alpha.appendChild(div);
             }
+            
         });
 
         function gen_ram_color() {
@@ -143,19 +157,54 @@
             btn_r.style.color = randomColor_final + '80%';
             color_body.style.backgroundColor = `${randomColor_final_u}`;
             heading.innerHTML = `
-            <h2 class="text-[${hslToHex(randomColor_final_u)}] rounded-full py-4 px-6 font-bold text-9xl">${random_hex}</h2>
+            <h2 class="text-[${hslToHex(randomColor_final_u)}] rounded-full py-4 px-6 font-bold text-5xl md:text-8xl">${random_hex}</h2>
             `;
+
+            color_body_alpha.classList = `outline-[${hslToHex(randomColor_final_u)}] flex flex-col h-auto w-full justify-center items-center shadow-lg text-center  rounded-3xl mt-6 outline outline-1 overflow-hidden`;
+
+
             color_body_alpha.innerHTML = '';
             for (let index = 0; index < alpha_arr.length; index++) {
                 let div = document.createElement('div');
-                div.classList = 'h-full w-full flex justify-center items-center ';
+                div.classList = 'h-14 w-full flex justify-end items-center ';
                 let colors_shades_hsl = randomColor_final + alpha_arr[index];
-                div.style.backgroundColor = `${colors_shades_hsl}`;
-                div.innerHTML = `<p class="font-semibold text-2xl">${hslToHex(colors_shades_hsl)}</p>`;
+                div.innerHTML = `
+                <div class="copyable font-semibold text-2xl h-12 w-1/2 p-2 text-[${hslToHex(randomColor_final_u)}] rounded-l-3xl flex justify-start items-center">${hslToHex(colors_shades_hsl)}</div>
+                <div class="w-4/5 h-full bg-[${hslToHex(colors_shades_hsl)}] "></div>
+                `;
                 color_body_alpha.appendChild(div);
             }
         }
 
+
+        function copyText(event) {
+      // Get the text inside the clicked div
+      const divText = event.target.textContent;
+
+      // Create a temporary input element to copy the text to the clipboard
+      const tempInput = document.createElement("textarea");
+      tempInput.value = divText;
+      document.body.appendChild(tempInput);
+
+      // Select the text inside the input element
+      tempInput.select();
+      tempInput.setSelectionRange(0, 99999); // For mobile devices
+
+      // Copy the text to the clipboard
+      document.execCommand("copy");
+
+      // Remove the temporary input element
+      document.body.removeChild(tempInput);
+
+      // Optionally, provide feedback to the user
+      
+    }
+
+    // Add click event listeners to all elements with class "copyable"
+    const copyableElements = document.querySelectorAll(".copyable");
+    copyableElements.forEach(function(element) {
+      element.addEventListener("click", copyText);
+    });
 
     </script>
 </body>
