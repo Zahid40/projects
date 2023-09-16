@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Color Generator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <style>
+        /* Apply a global reset */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+</head>
+
+<body
+    class="flex flex-col justify-center items-center p-10 ">
+    <div id="code_show" class="text-4xl"></div>
+    <div id="code_div" class="h-40 w-4/5 shadow-lg rounded-full flex flex-col justify-center items-center p-10">
+    </div>
+
+    <div id="code_div_alpha"
+        class=" flex flex-col h-96 w-4/5 justify-center items-center shadow-lg rounded-3xl overflow-hidden text-center m-4 bg-white">
+    </div>
+
+    <button id="random_btn" class=" rounded-full p-4  shadow-lg font-bold w-4/5 h-20" onclick="gen_ram_color()">Random Color</button>
+
+    <script>
+        let color_body = document.getElementById('code_div');
+        let color_body_alpha = document.getElementById('code_div_alpha');
+        let heading = document.getElementById('code_show');
+        let btn_r = document.getElementById('random_btn');
+        let alpha_arr = ["90%)", "80%)", "70%)", "60%)", "50%)", "40%)", "30%)", "20%)", "10%)"];
+
+        //create random color
+        function getRandomHSLColor() {
+            // Generate random values for H, S, and L components
+            const hue = Math.floor(Math.random() * 360); // Random hue between 0 and 360 degrees
+            const saturation = Math.floor(Math.random() * 101); // Random saturation between 0% and 100%
+            //   const lightness = Math.floor(Math.random() * 101); // Random lightness between 0% and 100%
+            // Create the HSL color string
+            const hslColor = `hsl(${hue}, ${saturation}%,`;
+
+            return hslColor;
+        }
+
+        //hsl to hex
+        function hslToHex(hslColor) {
+            const hslMatch = hslColor.match(/hsl\((\d+),\s*(\d+)%,\s*(\d+)%\)/);
+
+            if (!hslMatch) {
+                // Handle invalid input
+                return null;
+            }
+
+            const h = parseInt(hslMatch[1]);
+            const s = parseInt(hslMatch[2]) / 100;
+            const l = parseInt(hslMatch[3]) / 100;
+
+            const c = (1 - Math.abs(2 * l - 1)) * s;
+            const x = c * (1 - Math.abs(((h / 60) % 2) - 1));
+            const m = l - c / 2;
+
+            let r, g, b;
+
+            if (h >= 0 && h < 60) {
+                r = c;
+                g = x;
+                b = 0;
+            } else if (h >= 60 && h < 120) {
+                r = x;
+                g = c;
+                b = 0;
+            } else if (h >= 120 && h < 180) {
+                r = 0;
+                g = c;
+                b = x;
+            } else if (h >= 180 && h < 240) {
+                r = 0;
+                g = x;
+                b = c;
+            } else if (h >= 240 && h < 300) {
+                r = x;
+                g = 0;
+                b = c;
+            } else {
+                r = c;
+                g = 0;
+                b = x;
+            }
+
+            const rHex = Math.round((r + m) * 255).toString(16).padStart(2, '0');
+            const gHex = Math.round((g + m) * 255).toString(16).padStart(2, '0');
+            const bHex = Math.round((b + m) * 255).toString(16).padStart(2, '0');
+
+            return `#${rHex}${gHex}${bHex}`;
+        }
+
+        // Example usage:
+        const hslColor = "hsl(200, 50%, 60%)";
+        const hexColor = hslToHex(hslColor);
+        console.log(hexColor);
+
+
+
+        document.addEventListener("DOMContentLoaded", function () {
+            let randomColor_final = getRandomHSLColor();
+            let randomColor_final_u = randomColor_final + '50%)';
+            let random_hex = hslToHex(randomColor_final_u);
+            document.body.style.backgroundColor = randomColor_final + '20%)';
+            btn_r.style.backgroundColor = randomColor_final + '30%';
+            btn_r.style.color = randomColor_final + '80%';
+            color_body.style.backgroundColor = `${randomColor_final_u}`;
+            heading.innerHTML = `
+            <h2 class="text-[${hslToHex(randomColor_final_u)}] rounded-full py-4 px-6 font-bold text-9xl">${random_hex}</h2>
+            `;
+
+
+            for (let index = 0; index < alpha_arr.length; index++) {
+                let div = document.createElement('div');
+                div.classList = 'h-full w-full flex justify-center items-center ';
+                let colors_shades_hsl = randomColor_final + alpha_arr[index];
+                div.style.backgroundColor = `${colors_shades_hsl}`;
+                div.innerHTML = `<p class="font-semibold text-2xl">${hslToHex(colors_shades_hsl)}</p>`;
+                color_body_alpha.appendChild(div);
+            }
+        });
+
+        function gen_ram_color() {
+            let randomColor_final = getRandomHSLColor();
+            let randomColor_final_u = randomColor_final + '50%)';
+            let random_hex = hslToHex(randomColor_final_u);
+            document.body.style.backgroundColor = randomColor_final + '20%)';
+            btn_r.style.backgroundColor = randomColor_final + '30%';
+            btn_r.style.color = randomColor_final + '80%';
+            color_body.style.backgroundColor = `${randomColor_final_u}`;
+            heading.innerHTML = `
+            <h2 class="text-[${hslToHex(randomColor_final_u)}] rounded-full py-4 px-6 font-bold text-9xl">${random_hex}</h2>
+            `;
+            color_body_alpha.innerHTML = '';
+            for (let index = 0; index < alpha_arr.length; index++) {
+                let div = document.createElement('div');
+                div.classList = 'h-full w-full flex justify-center items-center ';
+                let colors_shades_hsl = randomColor_final + alpha_arr[index];
+                div.style.backgroundColor = `${colors_shades_hsl}`;
+                div.innerHTML = `<p class="font-semibold text-2xl">${hslToHex(colors_shades_hsl)}</p>`;
+                color_body_alpha.appendChild(div);
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>

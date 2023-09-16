@@ -10,21 +10,25 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
-    <style>
-        * {
-            font-family: 'Poppins', sans-serif;
-        }
-    </style>
+        <style>
+            /* Apply a global reset */
+            * {
+              box-sizing: border-box;
+              margin: 0;
+              padding: 0;
+              font-family: 'Poppins', sans-serif;
+            }
+          </style>  
 </head>
 
-<body class="flex flex-col justify-center items-center p-10">
+<body class="flex flex-col justify-center items-center p-10 bg-cover bg-center bg-[url('https://media3.giphy.com/media/l2Sqf1fbj1qrmaJ6E/giphy.gif?cid=ecf05e47tx9fhktztren06boqgf8czrgw0ns233voi6oqrvd&ep=v1_gifs_search&rid=giphy.gif&ct=g')]">
+    <div id="code_show" class="text-4xl"></div>
     <div id="code_div" class="h-40 w-4/5 shadow-lg rounded-full flex flex-col justify-center items-center p-10">
-        <div id="code_show" class="text-4xl"></div>
     </div>
 
-    <div id="code_div_alpha" class=" flex flex-col h-96 w-4/5 justify-center items-center shadow-lg rounded-3xl overflow-hidden text-center m-4"></div>
+    <div id="code_div_alpha" class=" flex flex-col h-96 w-4/5 justify-center items-center shadow-lg rounded-3xl overflow-hidden text-center m-4 bg-white"></div>
 
-    <button class="bg-purple-700 rounded-full p-4 text-white shadow-lg" onclick="gen_ram_color()">Random Color</button>
+    <button class="bg-purple-700 rounded-full p-4 text-purple-500 shadow-lg font-bold w-4/5 h-20" onclick="gen_ram_color()">Random Color</button>
 
     <script>
         let color_body = document.getElementById('code_div');
@@ -38,20 +42,19 @@
     return randomColor;
 }
 
-
         document.addEventListener("DOMContentLoaded", function () {
             const randomColor_final = getRandomHexColor();
             color_body.style.backgroundColor = randomColor_final;
             heading.innerHTML = `
-            <h2>${randomColor_final}</h2>
+            <h2 class="text-[${randomColor_final + "cc"}] rounded-full py-4 px-6 font-bold text-9xl">${randomColor_final}</h2>
             `;
 
 
             for (let index = 0; index < alpha_arr.length; index++) {
                 let div = document.createElement('div');
-                div.classList = 'h-full w-full';
+                div.classList = 'h-full w-full flex justify-center items-center ';
                 div.style.backgroundColor = `${randomColor_final + alpha_arr[index]}`;
-                div.innerHTML = `<p>${randomColor_final + alpha_arr[index]}</p>`;
+                div.innerHTML = `<p class="font-semibold text-2xl">${randomColor_final + alpha_arr[index]}</p>`;
                 color_body_alpha.appendChild(div);
             }
         });
@@ -61,7 +64,8 @@
 
             color_body.style.backgroundColor = randomColor_final;
             heading.innerHTML = `
-            <h2>${randomColor_final}</h2>
+            <h2 class="text-[${randomColor_final + "cc"}] rounded-full py-4 px-6 font-bold text-9xl opacity-100
+">${randomColor_final}</h2>
             `;
             color_body_alpha.innerHTML = '';
             for (let index = 0; index < alpha_arr.length; index++) {
