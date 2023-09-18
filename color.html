@@ -35,8 +35,8 @@ html {
 
 <body
     class="flex flex-col justify-center items-center p-10">
-    <div id="code_show" class="copyable " ></div>
     <div id="code_div" class="h-40 w-full shadow-lg rounded-full flex flex-col justify-center items-center p-10 m-2">
+        <div id="code_show" class="copyable " ></div>
     </div>
     <div id="code_div_alpha">
     </div>
@@ -129,13 +129,14 @@ html {
         document.addEventListener("DOMContentLoaded", function () {
             let randomColor_final = getRandomHSLColor();
             let randomColor_final_u = randomColor_final + '50%)';
+            let randomColor_final_h = randomColor_final + '20%)';
             let random_hex = hslToHex(randomColor_final_u);
             document.body.style.backgroundColor = randomColor_final + '20%)';
             btn_r.style.backgroundColor = randomColor_final + '30%';
             btn_r.style.color = randomColor_final + '80%';
             color_body.style.backgroundColor = `${randomColor_final_u}`;
             heading.innerHTML = `
-            <h2 class="text-[${hslToHex(randomColor_final_u)}] rounded-full py-4 px-6 font-bold text-5xl md:text-8xl">${random_hex}</h2>
+            <h2 class="text-[${hslToHex(randomColor_final_h)}] rounded-full py-4 px-6 font-bold text-5xl md:text-8xl">${random_hex}</h2>
             `;
 
             color_body_alpha.classList = `outline-[${hslToHex(randomColor_final_u)}] flex flex-col h-auto w-full justify-center items-center shadow-lg text-center  rounded-3xl mt-6 outline outline-1 overflow-hidden`;
@@ -157,13 +158,14 @@ html {
         function gen_ram_color() {
             let randomColor_final = getRandomHSLColor();
             let randomColor_final_u = randomColor_final + '50%)';
+            let randomColor_final_h = randomColor_final + '30%)';
             let random_hex = hslToHex(randomColor_final_u);
             document.body.style.backgroundColor = randomColor_final + '20%)';
             btn_r.style.backgroundColor = randomColor_final + '30%';
             btn_r.style.color = randomColor_final + '80%';
             color_body.style.backgroundColor = `${randomColor_final_u}`;
             heading.innerHTML = `
-            <h2 class="text-[${hslToHex(randomColor_final_u)}] rounded-full py-4 px-6 font-bold text-5xl md:text-8xl">${random_hex}</h2>
+            <h2 class="text-[${hslToHex(randomColor_final_h)}] rounded-full py-4 px-6 font-bold text-5xl md:text-8xl">${random_hex}</h2>
             `;
 
             color_body_alpha.classList = `outline-[${hslToHex(randomColor_final_u)}] flex flex-col h-auto w-full justify-center items-center shadow-lg text-center  rounded-3xl mt-6 outline outline-1 overflow-hidden`;
