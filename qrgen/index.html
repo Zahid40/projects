@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/d304302302.js" crossorigin="anonymous"></script>
+    <style>
+        *{
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center w-full h-screen bg-indigo-200">
+
+      <div class="relative flex w-contain flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-lg ">
+        <div id="qr_div" class="relative mx-4 mt-6 h-96 w-96 aspect-square  overflow-hidden rounded-xl bg-blue-gray-500 bg-clip-border text-white shadow-lg shadow-blue-gray-500/40 border border-dashed border-indigo-500">
+        </div>
+        <div class="p-6">
+            <div class="flex justify-between items-center">
+                <h5 class="mb-2 font-sans text-2xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased">
+                  Create Custom QR 
+                </h5>
+                <a id="downloadLink" class="hidden"><i class="fa fa-download"></i></a>
+            </div>
+
+          <div class="relative w-full min-w-[200px]">
+            <textarea id="text_cont_input"
+              class="peer h-full min-h-[100px] w-full resize-none rounded-[7px] border border-blue-gray-200 border-t-transparent bg-indigo-200 px-3 py-2.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 focus:border-2 focus:border-indigo-500 focus:border-t-transparent focus:outline-0 disabled:resize-none disabled:border-0 disabled:bg-blue-gray-50 shadow-lg"
+              placeholder=" "
+            ></textarea>
+            <label class="before:content[' '] after:content[' '] pointer-events-none absolute left-0 -top-1.5 flex h-full w-full select-none text-[11px] font-normal leading-tight text-blue-gray-400 transition-all before:pointer-events-none before:mt-[6.5px] before:mr-1 before:box-border before:block before:h-1.5 before:w-2.5 before:rounded-tl-md before:border-t before:border-l before:border-blue-gray-200 before:transition-all after:pointer-events-none after:mt-[6.5px] after:ml-1 after:box-border after:block after:h-1.5 after:w-2.5 after:flex-grow after:rounded-tr-md after:border-t after:border-r after:border-blue-gray-200 after:transition-all peer-placeholder-shown:text-sm peer-placeholder-shown:leading-[3.75] peer-placeholder-shown:text-blue-gray-500 peer-placeholder-shown:before:border-transparent peer-placeholder-shown:after:border-transparent peer-focus:text-[11px] peer-focus:leading-tight peer-focus:text-indigo-500 peer-focus:before:border-t-2 peer-focus:before:border-l-2 peer-focus:before:border-indigo-500 peer-focus:after:border-t-2 peer-focus:after:border-r-2 peer-focus:after:border-indigo-500 peer-disabled:text-transparent peer-disabled:before:border-transparent peer-disabled:after:border-transparent peer-disabled:peer-placeholder-shown:text-blue-gray-500">
+              Textarea indigo
+            </label>
+          </div>
+        </div>
+        <div class="p-6 pt-0">
+          <button
+            class="select-none rounded-lg bg-indigo-500 py-3 px-6 w-full text-center align-middle font-sans text-sm font-bold text-white shadow-md shadow-indigo-500/20 transition-all hover:shadow-lg hover:shadow-indigo-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+            type="button"
+            data-ripple-light="true"
+            onclick="gen_qr()"
+          >
+            Generate
+          </button>
+        </div>
+        <div class="flex items-center justify-around text-indigo-900 text-3xl py-3 px-6">
+            <a href="https://www.instagram.com/its_zahid83/"><i class="fa fa-instagram"></i></a>
+            <a href="https://github.com/Zahid40"><i class="fa fa-github"></i></a>
+            <a href="https://zahid40.github.io/"><i class="fa fa-globe"></i></a>
+        </div>
+        <span class="text-indigo-900 text-sm py-3 px-6">Developed by Zahid</span>
+      </div>
+</body>
+<script src="./script.js"></script>
+</html>
