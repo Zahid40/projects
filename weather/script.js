@@ -10,12 +10,18 @@ const successCallback = (position) => {
 
 
   if ("geolocation" in navigator) {
+    const options = {
+        enableHighAccuracy: true,
+    };
     navigator.geolocation.getCurrentPosition(function (position) {
         // Success callback
-        const latitude = position.coords.latitude;
-        const longitude = position.coords.longitude;
-        console.log("Latitude:", latitude);
-        console.log("Longitude:", longitude);
+        const location_user = `${position.coords.latitude},${position.coords.longitude}`;
+
+        //weather api call
+        console.log(location_user);
+        weather(location_user);
+
+        
     }, function (error) {
         switch (error.code) {
             case error.PERMISSION_DENIED:
@@ -31,32 +37,47 @@ const successCallback = (position) => {
                 console.error("An unknown error occurred.");
                 break;
         }
-    });
+        // getlocation_ipconfig();
+    }, options);
 } else {
     console.error("Geolocation is not available in this browser.");
+    getlocation_ipconfig();
 }
- 
-fetch("https://ipinfo.io/json")
+
+let getlocation_ipconfig = ()=>{
+    fetch("https://ipinfo.io/json")
+        .then(response => response.json())
+        .then(data => {
+            // Log the full object returned
+            console.log(data);
+            // You can access specific properties of the data object as needed
+            const location_user = data.loc;
+            const city = data.city;
+            const region = data.region;
+
+            //weather api call
+            console.log(location_user);
+            // weather(city);
+        })
+        .catch(error => {
+            console.error("Error:", error);
+        });
+}
+
+//calling weather api
+function weather(loc) {
+    fetch(`http://api.weatherapi.com/v1/current.json?key=b4a1bb3e233645e99dd154247232510&q=${loc}&days=10&aqi=yes&alerts=yes`)
     .then(response => response.json())
     .then(data => {
-        // Log the full object returned
         console.log(data);
-        
-        // You can access specific properties of the data object as needed
-        const location = data.loc;
-        const city = data.city;
-        const region = data.region;
-        
-        // Now, you can use these properties as necessary
-        console.log("Location:", location);
-        console.log("City:", city);
-        console.log("Region:", region);
-        let root = document.getElementById('root');
-    root.innerHTML = `${city}`;
     })
     .catch(error => {
-        console.error("Error:", error);
-    });
+            console.error("Error:", error);
+        });
+    
+}
+
+ 
 
     
 
