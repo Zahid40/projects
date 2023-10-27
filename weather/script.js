@@ -1,3 +1,4 @@
+
 const successCallback = (position) => {
     console.log(position);
   };
@@ -57,7 +58,7 @@ let getlocation_ipconfig = ()=>{
 
             //weather api call
             console.log(location_user);
-            // weather(city);
+            weather(city);
         })
         .catch(error => {
             console.error("Error:", error);
@@ -66,16 +67,22 @@ let getlocation_ipconfig = ()=>{
 
 //calling weather api
 function weather(loc) {
-    fetch(`http://api.weatherapi.com/v1/current.json?key=b4a1bb3e233645e99dd154247232510&q=${loc}&days=10&aqi=yes&alerts=yes`)
+    fetch(`http://api.weatherapi.com/v1/forecast.json?key=b4a1bb3e233645e99dd154247232510&q=${loc}&days=10&aqi=yes&alerts=yes`)
     .then(response => response.json())
     .then(data => {
+         let user = data;
         console.log(data);
+
     })
     .catch(error => {
             console.error("Error:", error);
         });
     
 }
+
+
+
+
 
  
 

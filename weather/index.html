@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Zoom</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,8 +18,8 @@
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@24,200,0,0" />
 </head>
 
-<body class="bg-gray-200">
-    <div class="w-full p-4 h-14 rounded-2xl">
+<body class="bg-gray-200 flex flex-col">
+    <div class="w-full p-4 rounded-2xl">
         <div class=" w-full flex justify-start items-center">
             <span class="material-symbols-sharp text-4xl">
                 landscape
@@ -24,19 +27,19 @@
             <p>ZOOM</p>
         </div>
         <div class="w-full h-auto bg-white shadow-lg p-3 rounded-2xl flex flex-col justify-center items-start">
-            
+
             <div class="flex flex-col items-start w-full">
-                    <div class="flex justify-between w-full">
-                        <div class="flex justify-end">
-                            <span class="material-symbols-sharp text-4xl ">
-                                location_on
-                            </span>
-                            <span class="text-4xl">Delhi</span>
-                        </div>
-                        <div class="flex flex-col items-end text-xs">
-                            <p>India</p>
-                            <p>more details</p>
-                        </div>
+                <div class="flex justify-between w-full">
+                    <div class="flex justify-end">
+                        <span class="material-symbols-sharp text-4xl ">
+                            location_on
+                        </span>
+                        <span class="text-4xl">Delhi</span>
+                    </div>
+                    <div class="flex flex-col items-end text-xs">
+                        <p>India</p>
+                        <p>more details</p>
+                    </div>
                 </div>
             </div>
             <div class="flex w-full items-center justify-center p-4">
@@ -45,12 +48,107 @@
                     <p class="text-sm">Sunny</p>
                 </div>
                 <h1 class="text-9xl flex">34<span class="text-2xl">&deg;C</span></h1>
-
+            </div>
+            <div class="flex justify-center items-center">
+                <span class="material-symbols-sharp">
+                    taunt
+                </span>
+                <p>Feels like 30 &deg;C</p>
             </div>
         </div>
+    </div>
+    <div>
+        <!-- Slider main container -->
+        <div class="swiper w-full ">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                    <div class="bg-red-500 w-28 h-48">
+                        56
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="bg-red-500 w-28 h-48">
+                        56
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="bg-red-500 w-28 h-48">
+                        56
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="bg-red-500 w-28 h-48">
+                        56
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="bg-red-500 w-28 h-48">
+                        56
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="bg-red-500 w-28 h-48">
+                        56
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="bg-red-500 w-28 h-48">
+                        56
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="bg-red-500 w-28 h-48">
+                        56
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="bg-red-500 w-28 h-48">
+                        56
+                    </div>
+                </div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+            <!-- If we need scrollbar -->
+            <div class="swiper-scrollbar"></div>
+        </div>
+
     </div>
 
 </body>
 <script src="./script.js"></script>
+<script src="./script_2.js"></script>
+<script>
+    const swiper = new Swiper('.swiper', {
+        // Optional parameters
+        direction: 'horizontal',
+        loop: true,
+        slidesPerView: 5,
+	
+
+        // If we need pagination
+        pagination: {
+            el: '.swiper-pagination',
+        },
+
+        // Navigation arrows
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+
+        // And if we need scrollbar
+        scrollbar: {
+            el: '.swiper-scrollbar',
+        },
+    });
+</script>
 
 </html>
