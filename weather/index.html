@@ -49,11 +49,49 @@
                 </div>
                 <h1 class="text-9xl flex">34<span class="text-2xl">&deg;C</span></h1>
             </div>
+
+            <div class="w-full h-8 rounded-md flex justify-around items-center bg-gradient-to-r from-red-100 to-purple-100">
+                <p class="flex justify-between"><span class="material-symbols-sharp">
+                    thermometer_add
+                    </span><span>40&deg;C</span>
+                </p>
+                <p class="flex justify-between"><span class="material-symbols-sharp">
+                    thermometer_minus
+                    </span><span>20&deg;C</span>
+                </p>
+            </div>
+
+            <div class="flex justify-around space-x-2 mt-4 w-full items-center">
+                <div class="w-full h-28  border border-purple-400 rounded-xl flex flex-col justify-center items-center">
+                    <p ></p>
+
+                </div>
+                <div class="w-full border border-purple-400 rounded-xl flex flex-col justify-center">
+                    <span class="flex justify-center items-center"><div class="bg-red-500 h-8 w-8 inline-block rounded-full flex justify-center items-center text-white">Air</div><span>&nbsp;Quality</span></span>
+
+                    <div class="flex border justfy-between">
+                        <div class="w-1/2">co2</div>
+
+                        <div class="bg-red-500 text-white min-w-48 w-48 h-48 rounded-full flex justify-center items-center font-bold text-3xl  relative ">
+                            988
+                        </div>
+                    </div>
+
+                </div>
+            </div>
             <div class="flex justify-center items-center">
                 <span class="material-symbols-sharp">
                     taunt
                 </span>
                 <p>Feels like 30 &deg;C</p>
+            </div>
+            <div class="flex justify-around space-x-2 mt-4 w-full items-center">
+                <div class="w-full h-60 bg-gray-200 border border-purple-400 rounded-xl flex flex-col justify-center items-center">
+                    <p >Astro</p>
+
+                </div>
+                <div class="w-full h-60 bg-gray-200 border border-purple-400 rounded-xl flex flex-col justify-center items-center">AQI</div>
+                <div class="w-full h-60 bg-gray-200 border border-purple-400 rounded-xl flex flex-col justify-center items-center">Wind</div>
             </div>
         </div>
     </div>
